@@ -1,0 +1,17 @@
+<div class="container mt-5">
+
+<% @pets.each do |pet| %>
+  <div class="card-size">
+    <div class="card-trip mt-5">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Nom du chien : <%= pet.name %></h2>
+          <p>Âge : <%= pet.age %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+</div>
