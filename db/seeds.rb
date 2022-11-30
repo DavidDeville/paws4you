@@ -28,11 +28,11 @@
 
     puts "Creating pets"
 
-    first_pet = Pet.create!(name: "Robert", age: "10/10/2015", race: "Labrador", gender: "Male", shelter_id: first_shelter.id, category: "dog", family_friendly: true, is_adopted: false)
-    second_pet = Pet.create!(name: "Jean Louis", age: "10/10/2015", race: "Shiba", gender: "Female", shelter_id: first_shelter.id, category: "dog", family_friendly: true, is_adopted: false)
-    third_pet = Pet.create!(name: "Richard", age: "10/10/2015", race: "Golden Retriever", gender: "Male", shelter_id: first_shelter.id, category: "dog", family_friendly: true, is_adopted: false)
-    fourth_pet = Pet.create!(name: "Bella", age: "10/10/2015", race: "Berger allemand", gender: "Female", shelter_id: first_shelter.id, category: "dog", family_friendly: true, is_adopted: false)
-    fifth_pet = Pet.create!(name: "GigaChien", age: "10/10/2015", race: "Cavalier King Charles", gender: "Male", shelter_id: first_shelter.id, category: "dog", family_friendly: true, is_adopted: false)
+    first_pet = Pet.create!(name: "Robert", age: "10/10/2015", race: "Labrador", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    second_pet = Pet.create!(name: "Jean Louis", age: "10/10/2015", race: "Shiba", gender: "femelle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    third_pet = Pet.create!(name: "Richard", age: "10/10/2015", race: "Golden Retriever", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    fourth_pet = Pet.create!(name: "Bella", age: "10/10/2015", race: "Berger allemand", gender: "femelle", shelter_id: first_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    fifth_pet = Pet.create!(name: "GigaChien", age: "10/10/2015", race: "Cavalier King Charles", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
 
     puts "Pets created"
 
