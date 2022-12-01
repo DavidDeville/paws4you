@@ -10,6 +10,9 @@ class ListPetsController < ApplicationController
 
     # Le nouveau rendu devrait être géré par stimulus
     # redirect_to pets_path
+    # respond_to do |format|
+    #   format.json
+    # end
   end
 
   private

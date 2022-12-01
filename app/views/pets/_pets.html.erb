@@ -1,5 +1,4 @@
-<% if pets.count > 0 %>
-  <% index = 0 %>
+<% index = 0 %>
   <% pets.each do |pet| %>
     <div class="card-size d-none" data-list-target="pet">
       <div class="card-trip mt-5">
@@ -16,13 +15,12 @@
         </div>
       </div>
     </div>
-    <% index += 1 %>
-  <% end %>
-<% else %>
-  <div>
-    <h2 class="text-center">Il n'y a plus de woof woof en stock</h2>
-    <div class="text-center">
-    <img src="https://i.pinimg.com/originals/68/e1/b1/68e1b1fa0f624d96ae19963960c44143.gif" alt="sad dog">
-    </div>
-  </div>
+  <% index += 1 %>
 <% end %>
+
+<div class=" <%= pets.empty? ? "" : "d-none" %>" data-list-target="test">
+  <h2 class="text-center">Il n'y a plus de woof woof en stock</h2>
+  <div class="text-center">
+    <img src="https://i.pinimg.com/originals/68/e1/b1/68e1b1fa0f624d96ae19963960c44143.gif" alt="sad dog">
+  </div>
+</div>
