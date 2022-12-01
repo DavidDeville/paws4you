@@ -1,18 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="list"
 export default class extends Controller {
-  static targets = ["pet"]
+  static targets = ["pet", "test"]
 
   connect() {
-    // this.#switchCards()
-    console.log(this.petTargets);
     this.#displayFirstCard();
+    console.log(this.testTarget);
   }
 
   addToWishList(event) {
     event.preventDefault();
-    console.log(event.currentTarget);
-
+    console.log(event.currentTarget.dataset.index);
     let url = event.currentTarget.href;
     let petId = parseInt(event.currentTarget.dataset.petId, 10);
     let liked = JSON.parse(event.currentTarget.dataset.liked.toLowerCase());
@@ -23,47 +21,43 @@ export default class extends Controller {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        petId,
-        liked
+        petId: petId,
+        liked: liked
       })
     })
     .then(response => response.text())
     .then((data) => {
-      this.#displayNextCard(parseInt(event.currentTarget.dataset.index, 10));
+      // console.log(data);
     })
+    this.#displayNextCard(parseInt(event.currentTarget.dataset.index, 10));
   }
 
   #displayFirstCard() {
-    this.petTargets[0].classList.remove("d-none");
-    this.petTargets[0].classList.add("d-block");
-    console.log(this.petTargets.indexOf(this.petTarget));
+    if(this.petTargets.length !== 0) {
+      this.petTargets[0].classList.remove("d-none");
+      this.petTargets[0].classList.add("d-block");
+    }
   }
 
   #displayNextCard(index) {
-    this.petTargets[index].classList.remove("d-block");
-    this.petTargets[index].classList.add("d-none");
-    console.log('l\'index:', index);
-    if(index == 0) {
-      this.petTargets[index ].classList.remove("d-none");
-      this.petTargets[index].classList.add("d-block");
-    }
-    else {
-      this.petTargets[index + 1].classList.remove("d-none");
-      this.petTargets[index + 1].classList.add("d-block");
+
+    console.log();
+    if(index !== undefined) {
+      this.petTargets[index].classList.remove("d-block");
+      this.petTargets[index].classList.add("d-none");
+
+      if(this.petTargets.length !== index + 1) {
+        this.petTargets[index + 1].classList.remove("d-none");
+        this.petTargets[index + 1].classList.add("d-block");
+
+      } else {
+        console.log(this.testTarget);
+        this.testTarget.classList.remove("d-none");
+      }
+    } else {
+
+      // this.noPetTarget.classList.remove("d-block");
+      // this.noPetTarget.classList.add("d-block");
     }
   }
-
-  // #test() {
-
-  //   const array1 = this.petTargets;
-
-  //   const firstElement = array1.shift();
-
-  //   console.log(array1);
-  //   // const array1 = this.petTargets;
-  //   // const firstElement = array1.shift();
-  //   // console.log("array1:",array1);
-  //   // console.log("firstElement:", firstElement);
-  //   // console.log("this.petTargets:",this.petTargets);
-  // }
 }
