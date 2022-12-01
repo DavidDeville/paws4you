@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+  </style>
+
     <title>Paws4you</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
@@ -10,8 +15,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <body>
 
     <%= yield %>
   </body>
