@@ -1,6 +1,7 @@
 class Pet < ApplicationRecord
   GENDERS = ["mâle", "femelle"]
   CATEGORY = ["chien", "chat"]
+  has_one_attached :photo
   belongs_to :shelter
   has_many :list_pets
   validates :name, length: { minimum: 3 }, presence: true
