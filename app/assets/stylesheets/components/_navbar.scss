@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #F4F4F4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,26 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.bookmark {
+  color: #6CB491;
+}
+
+.navbar-title {
+  color: #6CB491;
+}
+
+.box {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.box:first-child > button {
+  margin-right: auto;
+}
+
+.box > .left-box {
+  margin-left: auto;
 }

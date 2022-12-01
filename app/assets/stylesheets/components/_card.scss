@@ -43,6 +43,7 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-radius: 0px 0px 25px 25px;
 }
 
 .card-trip h2 {
@@ -74,6 +75,5 @@
 }
 
 .card-size {
-  width: 500px;
-  margin: 0 auto;
+  margin-top: -48px;
 }
