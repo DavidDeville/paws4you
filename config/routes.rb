@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shelters
   get 'list_pet/index'
   get 'list_pet/new'
   get 'list_pet/show'
