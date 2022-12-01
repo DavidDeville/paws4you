@@ -51,54 +51,54 @@ puts "List pets destroyed"
 
     puts "Creating dogs"
 
-    one_pet = Pet.create!(name: "Cactus", age: "14/04/2022", race: "Bichon", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet1 = Pet.create!(name: "Cactus", age: "14/04/2022", race: "Bichon", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/62271/cactus-du-pays-du-bocage-62271-6388b4a637e23.jpg")
     pet1.photo.attach(io: file, filename: "Cactus", content_type: "image/jpg")
     pet1.save
 
-    two_pet = Pet.create!(name: "Yoshi", age: "10/11/2017", race: "Akita", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet2 = Pet.create!(name: "Yoshi", age: "10/11/2017", race: "Akita", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/20776/goku-oaa18811-20776-6290a706d61b8.jpg")
     pet2.photo.attach(io: file, filename: "Yoshi", content_type: "image/jpg")
     pet2.save
 
-    three_pet = Pet.create!(name: "Heiko", age: "01/01/2015", race: "Husky", gender: "femelle", shelter_id: second_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet3 = Pet.create!(name: "Heiko", age: "01/01/2015", race: "Husky", gender: "femelle", shelter_id: second_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/59503/balto-59503-635045cf178ec.jpg")
     pet3.photo.attach(io: file, filename: "Heiko", content_type: "image/jpg")
     pet3.save
 
-    four_pet = Pet.create!(name: "Bella", age: "17/12/2016", race: "Berger allemand", gender: "femelle", shelter_id: second_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet4 = Pet.create!(name: "Bella", age: "17/12/2016", race: "Berger allemand", gender: "femelle", shelter_id: second_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/34209/k-you-chao11481-34209-62c57912c4b34.jpg")
     pet4.photo.attach(io: file, filename: "Bella", content_type: "image/jpg")
     pet4.save
 
 
-    five_pet = Pet.create!(name: "Oli", age: "10/10/2021", race: "Berger Australien", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet5 = Pet.create!(name: "Oli", age: "10/10/2021", race: "Berger Australien", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/20067/heliot-20067-61952d6306d66.jpg")
     pet5.photo.attach(io: file, filename: "Oli", content_type: "image/jpg")
     pet5.save
 
-    six_pet = Pet.create!(name: "Toby", age: "22/11/2014", race: "Bouledogue", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet6 = Pet.create!(name: "Toby", age: "22/11/2014", race: "Bouledogue", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/40736/bilbo-40736-62713d0373f27.jpg")
     pet6.photo.attach(io: file, filename: "Toby", content_type: "image/jpg")
     pet6.save
 
-    seven_pet = Pet.create!(name: "Biscotte", age: "16/06/2020", race: "Beagle", gender: "mâle", shelter_id: fourth_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet7 = Pet.create!(name: "Biscotte", age: "16/06/2020", race: "Beagle", gender: "mâle", shelter_id: fourth_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/60482/rusty-60482-635ad92c8a970.jpg")
     pet7.photo.attach(io: file, filename: "Biscotte", content_type: "image/jpg")
     pet7.save
 
-    eight_pet = Pet.create!(name: "Lucky", age: "10/03/2020", race: "Labrador", gender: "femme", shelter_id: fourth_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet8 = Pet.create!(name: "Lucky", age: "10/03/2020", race: "Labrador", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/20547/heaven-20547-61c43e4254ebb.jpg")
     pet8.photo.attach(io: file, filename: "Lucky", content_type: "image/jpg")
     pet8.save
 
 
-    nine_pet = Pet.create!(name: "Tommy", age: "07/15/2019", race: "Bouvier Bernois", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet9 = Pet.create!(name: "Tommy", age: "07/15/2019", race: "Bouvier Bernois", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/27747/darlene-27747-623b33ced4e63.jpg")
     pet9.photo.attach(io: file, filename: "Tommy", content_type: "image/jpg")
     pet9.save
 
-    ten_pet = Pet.create!(name: "Cookie", age: "13/05/2019", race: "Dalmatien", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    pet10 = Pet.create!(name: "Cookie", age: "13/05/2019", race: "Dalmatien", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/27747/darlene-27747-623b33ced4e63.jpg")
     pet10.photo.attach(io: file, filename: "Cookie", content_type: "image/jpg")
     pet10.save
@@ -109,54 +109,54 @@ puts "List pets destroyed"
 
     puts "Creating cats"
 
-    one_pet = Pet.create!(name: "Tigrou", age: "14/04/2022", race: "Européen", gender: "femelle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet1 = Pet.create!(name: "Tigrou", age: "14/04/2022", race: "Européen", gender: "femelle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/63890/tony-cab1771-63890-63820ec4e617f.jpg")
     pet1.photo.attach(io: file, filename: "Tigrou", content_type: "image/jpg")
     pet1.save
 
-    two_pet = Pet.create!(name: "Lucifer", age: "10/11/2017", race: "Européen", gender: "mâle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet2 = Pet.create!(name: "Lucifer", age: "10/11/2017", race: "Européen", gender: "mâle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/37023/ricardo-c17681-37023-625833f7ce3ae.jpg")
     pet2.photo.attach(io: file, filename: "Lucifer", content_type: "image/jpg")
     pet2.save
 
-    three_pet = Pet.create!(name: "Luna", age: "20/03/2019", race: "Européen", gender: "femelle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet3 = Pet.create!(name: "Luna", age: "20/03/2019", race: "Européen", gender: "femelle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/62221/manhattan-62221-636e7a000bd01.jpg")
     pet3.photo.attach(io: file, filename: "Luna", content_type: "image/jpg")
     pet3.save
 
-    four_pet = Pet.create!(name: "Olan", age: "06/03/2018", race: "Européen", gender: "mâle", shelter_id: fourth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet4 = Pet.create!(name: "Olan", age: "06/03/2018", race: "Européen", gender: "mâle", shelter_id: fourth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/61123/harmonie-61123-636286a32177c.jpg")
     pet4.photo.attach(io: file, filename: "Olan", content_type: "image/jpg")
     pet4.save
 
-    five_pet = Pet.create!(name: "Mochi", age: "26/02/2015", race: "Siamois", gender: "femelle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet5 = Pet.create!(name: "Mochi", age: "26/02/2015", race: "Siamois", gender: "femelle", shelter_id: fifth_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/55625/sasha-55625-63593fb867ebd.jpg")
     pet5.photo.attach(io: file, filename: "Mochi", content_type: "image/jpg")
     pet5.save
 
-    six_pet = Pet.create!(name: "Kitty", age: "03/02/2019", race: "Européen", gender: "femelle", shelter_id: first_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
-    file = URI.open(" https://www.la-spa.fr/app/assets-spa/uploads/animals/21002/gwapo-21002-632abef1b4c5e.jpg")
+    pet6 = Pet.create!(name: "Kitty", age: "03/02/2019", race: "Européen", gender: "femelle", shelter_id: first_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/21002/gwapo-21002-632abef1b4c5e.jpg")
     pet6.photo.attach(io: file, filename: "Kitty", content_type: "image/jpg")
     pet6.save
 
-    seven_pet = Pet.create!(name: "Filou", age: "19/04/2021", race: "Européen", gender: "mâle", shelter_id: first_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet7 = Pet.create!(name: "Filou", age: "19/04/2021", race: "Européen", gender: "mâle", shelter_id: first_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/61138/sunfyre-61138-63628e04011d3.jpg")
     pet7.photo.attach(io: file, filename: "Filou", content_type: "image/jpg")
     pet7.save
 
 
-    eight_pet = Pet.create!(name: "Garfield", age: "07/01/2019", race: "Européen", gender: "mâle", shelter_id: second_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet8 = Pet.create!(name: "Garfield", age: "07/01/2019", race: "Européen", gender: "mâle", shelter_id: second_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/43527/roose-43527-629b26d511b35.jpg")
     pet8.photo.attach(io: file, filename: "Garfield", content_type: "image/jpg")
     pet8.save
 
-    nine_pet = Pet.create!(name: "Roméo", age: "04/15/2016", race: "Européen", gender: "mâle", shelter_id: second_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet9 = Pet.create!(name: "Roméo", age: "04/15/2016", race: "Européen", gender: "mâle", shelter_id: second_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/58155/tazi-58155-634037af3326f.jpg")
     pet9.photo.attach(io: file, filename: "Roméo", content_type: "image/jpg")
     pet9.save
 
 
-    ten_pet = Pet.create!(name: "Looping", age: "13/05/2019", race: "Européen", gender: "mâle", shelter_id: third_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
+    pet10 = Pet.create!(name: "Looping", age: "13/05/2019", race: "Européen", gender: "mâle", shelter_id: third_shelter.id, category: "chat", family_friendly: true, is_adopted: false)
     file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/57297/crapouille-cha15649-57297-6338a1cf00fe0.jpg")
     pet10.photo.attach(io: file, filename: "Looping", content_type: "image/jpg")
     pet10.save
@@ -168,10 +168,10 @@ puts "List pets destroyed"
 
     puts "Creating list pets"
 
-    ListPet.create!(pet_id: first_pet.id, user_id: first_user.id, liked: true)
-    ListPet.create!(pet_id: second_pet.id, user_id: second_user.id, liked: false)
-    ListPet.create!(pet_id: third_pet.id, user_id: third_user.id, liked: true)
-    ListPet.create!(pet_id: fourth_pet.id, user_id: fourth_user.id, liked: false)
-    ListPet.create!(pet_id: fifth_pet.id, user_id: fifth_user.id, liked: true)
+    ListPet.create!(pet_id: pet1.id, user_id: first_user.id, liked: true)
+    ListPet.create!(pet_id: pet2.id, user_id: second_user.id, liked: false)
+    ListPet.create!(pet_id: pet3.id, user_id: third_user.id, liked: true)
+    ListPet.create!(pet_id: pet4.id, user_id: fourth_user.id, liked: false)
+    ListPet.create!(pet_id: pet5.id, user_id: fifth_user.id, liked: true)
 
     puts "Lists created"
