@@ -25,15 +25,46 @@
   <% pets.each do |pet| %>
     <div class="card-size d-none" data-list-target="pet">
       <div class="card-trip mt-5">
-        <%= cl_image_tag pet.photo.key %>
-        <div class="card-trip-infos">
+        <%= cl_image_tag pet.photo.key, class: "pet-image" %>
+        <div class="container">
+          <div class="box-main">
+            <div class="list-pets-box"></div>
+            <div class="list-pets-box">
+              <h1 class="dog-name"><%= pet.name %></h1>
+            </div>
+            <div class="list-pets-box">
+              <div class="list-pets-left-box">
+                <%= image_tag "https://www.la-spa.fr/static/media/nochildren.bb371c9d.svg", class: "nochildren-icon" %>
+                <%= image_tag "https://www.la-spa.fr/static/media/nocats.5f46b4e3.svg", class: "nocat-icon" %>
+              </div>
+            </div>
+          </div>
+          <div class="box-spa">
+            <i class="fa-solid fa-location-dot pet-location"></i>
+            <p>SPA Lille</p>
+          </div>
+          <div class="box-spa">
+            <i class="fa-solid fa-paw pet-paw"></i>
+            <p class="quality">Qualité clé : <span>Affectueux</span></p>
+          </div>
+          <div class="pet-tags">
+            <div class="tag"><%= pet.race %></div>
+            <div class="tag"><%= pet.gender %></div>
+            <div class="tag"><%= pet.category %></div>
+          </div>
           <div>
+            <div class="pet-description">
+              <p><%= pet.name %> est un jeune chien sous la réserve au premier abord car il est très craintif, mais qui, une fois en confiance, se montre adorable et affectueux.
+              Il est très dynamique et aura besoin de se sentir à l'aise dans son nouvel environnement.
+              Raïko est un chien qui a beaucoup de force, il faudra donc lui apprendre avec une éducation douce à se tenir en laisse.</p>
+            </div>
+          </div>
+          <div class="pet-liker">
             <div>
-              <h1><%= pet.name %></h1>
+              <%= link_to "", pet_list_pets_path(pet), class: "fa-solid fa-heart-crack cracked-heart", data: { turbo_method: :post, action: "click->list#addToWishList", index: index, liked: false, pet_id: pet.id } %>
             </div>
             <div>
-              <%= image_tag "https://www.la-spa.fr/static/media/nochildren.bb371c9d.svg", class: "nochildren-icon" %>
-              <%= image_tag "https://www.la-spa.fr/static/media/nocats.5f46b4e3.svg", class: "nocat-icon" %>
+              <%= link_to "", pet_list_pets_path(pet), class: "fa-solid fa-heart normal-heart", data: { turbo_method: :post, action: "click->list#addToWishList", index: index, liked: true, pet_id: pet.id } %>
             </div>
           </div>
         </div>
