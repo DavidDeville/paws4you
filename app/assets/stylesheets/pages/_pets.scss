@@ -1,0 +1,111 @@
+.nochildren-icon {
+  width: 40px;
+}
+
+.nocat-icon {
+  width: 40px;
+}
+
+.box-main {
+  display: flex;
+  padding: 16px;
+}
+
+.box-spa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 14px;
+  margin-bottom: 20px;
+}
+
+.box-spa > i {
+  color: #6CB491;
+}
+
+.box-spa > p {
+  font-size: 18px;
+  padding-left: 8px;
+}
+
+.list-pets-box {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.list-pets-box:first-child > button {
+  margin-right: auto;
+}
+
+.list-pets-box > .list-pets-left-box {
+  margin-left: auto;
+}
+
+.dog-name {
+  margin: 5px 0px;
+  font-weight: bold;
+}
+
+.pet-location {
+  font-size: 18px;
+}
+
+.pet-paw {
+  font-size: 26px;
+}
+
+.quality {
+  font-weight: bold;
+  font-size: inherit !important;
+}
+
+.quality > span {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.tag {
+  background-color: #F1F1F1;
+}
+
+.pet-tags {
+  display: flex;
+  justify-content: center;
+}
+
+.pet-tags > div {
+  padding: 2px 5px;
+  margin: 5px;
+  font-weight: 600;
+}
+
+.pet-description > p {
+  margin: 22px 32px;
+  text-align: justify;
+}
+
+.pet-image {
+  height: 56vh !important;
+  width: 100%;
+  object-fit: fill !important;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.cracked-heart {
+  color: #6CB491;
+  font-size: 54px;
+  text-decoration: none;
+}
+
+.normal-heart {
+  color: #6CB491;
+  font-size: 54px;
+  text-decoration: none;
+}
+
+.pet-liker {
+  display: flex;
+  justify-content: space-around;
+  margin: 24px 32px;
+}

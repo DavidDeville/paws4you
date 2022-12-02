@@ -1,17 +1,16 @@
-<div id="container">
-  <div id="content">
-    <div id="title">
-      <h1>Paws4You</h1>
+<div id="home-style">
+    <div id="content">
+      <div id="title">
+        <h1>Paws4You</h1>
+      </div>
+
+      <div id="text">
+        <p>Ils n'attendent plus que vous</p>
+      </div>
     </div>
 
-    <div id="text">
-      <p>Ils n'attendent plus que vous</p>
+    <img class="home-img" src="<%= image_path('png-image.png') %>">
+
+    <div id="login">
+       <%= link_to "CONNEXION/INSCRIPTION", new_user_session_path, :class => 'btn button-home w-100' %>
     </div>
-  </div>
-
-  <img src="<%= image_path('png-image.png') %>">
-
-  <div id="login">
-    <button type="button" class="btn button-home rounded text-align: center;">INSCRIPTION/CONNEXION</button>
-  </div>
-</div>
