@@ -12,6 +12,6 @@
     <img class="home-img" src="<%= image_path('png-image.png') %>">
 
     <div id="login">
-      <button type="button" class="btn button-home">INSCRIPTION/CONNEXION</button>
+       <%= link_to "CONNEXION/INSCRIPTION", new_user_session_path, :class => 'btn button-home w-100' %>
     </div>
 </div>
