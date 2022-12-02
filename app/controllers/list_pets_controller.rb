@@ -15,6 +15,9 @@ class ListPetsController < ApplicationController
     # end
   end
 
+  def index
+  end
+
   private
 
   def listpets_params

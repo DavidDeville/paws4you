@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :pets, only: ['index', 'show'] do
-    resources :list_pets, only: ['create']
+    resources :list_pets, only: ['index', 'create']
   end
 end
