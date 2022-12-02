@@ -7,7 +7,7 @@
   font-size: 51px;
 }
 
-#container {
+#home-style {
   padding-top: 5vh;
   padding-bottom: 5vh;
   display: flex ;
@@ -15,6 +15,7 @@
   align-items: center;
   height: 100vh;
   justify-content: space-evenly;
+  background: linear-gradient(#DBD8AE, #EFEDCA);
 }
 #text {
   color: #51B68E;
@@ -26,6 +27,9 @@
 
 
 img{
+width: 56vh;
+}
+.home-img {
 width: 60vh;
 margin-right: 5vh;
 margin-bottom: 5vh;

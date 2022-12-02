@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :pets, only: ['index', 'show'] do
     resources :list_pets, only: ['index', 'create']
   end
+  resources :shelters, only: ['show']
 end
