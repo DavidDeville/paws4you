@@ -1,28 +1,31 @@
 <%= render "shared/navbar" %>
 
-  <div id="container_map">
+<div id="container_map">
 <%#-----------------------Ajout de la carte------------------------------ %>
-
-    <div class= "map_view">
-      <img src="<%= image_path('map_paws4u.png') %>">
-      <div class="button_adresse">
-        <button type="button" class="btn button-home rounded">SPA Lille</button>
-        <button type="button" class="btn button-home rounded">150 Pl. de la Croix Rouge, 59200 Tourcoing</button>
-      </div>
+  <div class="map-view">
+    <img src="<%= image_path('mappy_paws.png') %>">
+    <div class="button-adresse text-center">
+      <button type="button" class="my-2 btn button-home rounded">SPA Lille</button>
+      <button type="button" class="my-2 btn button-home rounded">150 Pl. de la Croix Rouge, 59200 Tourcoing</button>
     </div>
   </div>
+</div>
 
-  <div id="container_infos">
-    <div class="infos">
-      <h2>
-          <p><i class="fa-regular fa-clock logo"></i> 9h à 19h</p>
-          <p><i class="fa-solid fa-phone logo"></i> 03 20 25 54 55</p>
-          <p> <i class="fa-sharp fa-solid fa-envelope logo"></i> spa.lille@la-spa.fr</p>
-          <p>Pour plus d’informations, contactez-nous</p>
-    </div>
-      <div class="button_message">
 
-      </h2>
+
+
+
+<div class="container container-resize">
+
+  <div class="infos">
+        <p class="infos-details"><i class="fa-regular fa-clock logo ms-4"></i> 9h à 19h</p>
+        <p class="infos-details"><i class="fa-solid fa-phone logo ms-4"></i> 03 20 25 54 55</p>
+        <p class="infos-details"><i class="fa-sharp fa-solid fa-envelope logo ms-4"></i> spa.lille@la-spa.fr</p>
+        <p>Pour plus d’informations, contactez-nous</p>
+  </div>
+
+
+    <div class="button-message">
       <button type="button" class="btn button-home rounded">Message</button>
-      </div>
-  </div>
+    </div>
+</div>
