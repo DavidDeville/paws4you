@@ -1,0 +1,20 @@
+body{
+  background: linear-gradient(#DBD8AE, #EFEDCA);
+}
+
+
+#container{
+padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+#container_infos {
+  color: 272A4B;
+  font-family: 'Harmattan', cursive;
+  font-weight: bold;
+  font-size: 32px;
+}
