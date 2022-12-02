@@ -1,1 +1,36 @@
 // Specific CSS for your home-page
+body{
+  background: linear-gradient(#DBD8AE, #EFEDCA);
+}
+
+#title h1{
+  color: #51B68E;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 51px;
+}
+
+#container {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+#text {
+  color: #51B68E;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+img{
+width: 60vh;
+margin-right: 5vh;
+margin-bottom: 5vh;
+}

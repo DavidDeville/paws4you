@@ -7,6 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 
+puts "Destroying List_pets.."
+ListPet.destroy_all
+puts "List pets destroyed"
+
 puts "Destroying Pets.."
 Pet.destroy_all
 puts "Pets destroyed"
@@ -19,9 +23,7 @@ puts "Destroying Users.."
 User.destroy_all
 puts "Users destroyed"
 
-puts "Destroying List_pets.."
-ListPet.destroy_all
-puts "List pets destroyed"
+
 
 # 1.times do
   #--------------------------------------------------Création des users--------------------------------------------------------------
