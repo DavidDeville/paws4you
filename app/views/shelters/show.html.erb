@@ -1,35 +1,24 @@
 <%= render "shared/navbar" %>
-
-<div id="container_map">
-<%#-----------------------Ajout de la carte------------------------------ %>
-  <div class="map-view">
-    <div style="width: 352px; height: 350px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-    <div class="button-adresse text-center">
-      <button type="button" class="my-2 btn button-home rounded"><%= @shelter.name %></button>
-      <button type="buttons" class="my-2 btn button-home rounded"><%= @shelter.address %></button>
-    </div>
+  <%#-----------------------Ajout de la carte------------------------------ %>
+<div class="map-view align-items-end"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="button-adresse text-center">
+    <button type="button" class="my-2 btn button-home rounded"><%= @shelter.name %></button>
+    <button type="buttons" class="my-2 btn button-home rounded"><%= @shelter.address %></button>
   </div>
 </div>
 
 
-
-
-
 <div class="container container-resize">
-
   <div class="infos">
-        <p class="infos-details"><i class="fa-regular fa-clock logo ms-4"></i> <%= @shelter.opening_hour%> à <%=@shelter.closing_hour %></p>
-        <p class="infos-details"><i class="fa-solid fa-phone logo ms-4"></i> <%= @shelter.phone_number %></p>
-        <p class="infos-details"><i class="fa-sharp fa-solid fa-envelope logo ms-4"></i><%= @shelter.email %></p>
-        <p>Pour plus d’informations, contactez-nous</p>
+    <p class="infos-details mt-3"><i class="fa-regular fa-clock logo"></i> <%= @shelter.opening_hour%> à <%=@shelter.closing_hour %></p>
+    <p class="infos-details"><i class="fa-solid fa-phone logo me-1"></i> <%= @shelter.phone_number %></p>
+    <p class="infos-details"><i class="fa-sharp fa-solid fa-envelope logo me-2"></i><%= @shelter.email %></p>
+    <p class="infos-details"><i class="fa-solid fa-circle-info logo me-2"></i>Pour plus d’informations, contactez-nous</p>
   </div>
-
-
-    <div class="button-message">
-      <button type="button" class="btn button-home rounded">Message</button>
-    </div>
+  <div class="button-message">
+    <button type="button" class="btn button-home rounded">Message</button>
+  </div>
 </div>
