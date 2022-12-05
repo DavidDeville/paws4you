@@ -1,38 +1,69 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container mt-3">
+  <h2 class="text-center">Éditer mon profil</h2>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :email, required: true, autofocus: true %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+      <% end %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+      <%= f.input :last_name,
+                  label: "Nom",
+                  required: false %>
+      <%= f.input :first_name,
+                  label: "Prénom",
+                  required: false %>
+      <%= f.input :city,
+                  label: "Ville",
+                  required: false %>
+      <%= f.input :phone_number,
+                  label: "Numéro de téléphone",
+                  required: false %>
+      <%= f.input :age,
+                  label: "Âge",
+                  required: false %>
+      <%= f.input :situation,
+                  label: "Situation",
+                  required: false %>
+      <%= f.input :has_garden,
+                  :label => "Je possède un jardin",
+                  required: false %>
+      <%= f.input :dog_preferences,
+                  label: "Je préfère les chiens",
+                  required: false %>
+      <%= f.input :cat_preferences,
+                  label: "Je préfère les chats",
+                  required: false %>
+      <%= f.input :password,
+                  label: "Nouveau mot de passe",
+                  hint: "Laissez ce champ vide si vous ne voulez pas le modifier",
+                  required: false,
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  label: "Confirmer le nouveau mot de passe",
+                  required: false,
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :current_password,
+                  label: "Ancien mot de passe",
+                  hint: "we need your current password to confirm your changes",
+                  required: true,
+                  input_html: { autocomplete: "current-password" } %>
+    </div>
 
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+    <div class="form-actions">
+      <%= f.button :submit, "Update", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <h3>Cancel my account</h3>
+
+  <div class="d-flex align-items-center">
+    <div>Unhappy?</div>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-link" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<div class="d-flex align-items-center">
-  <div>Unhappy?</div>
-  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-link" %>
+  <%= link_to "Back", :back %>
 </div>
-
-<%= link_to "Back", :back %>
