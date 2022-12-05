@@ -5,7 +5,6 @@ export default class extends Controller {
 
   connect() {
     this.#displayFirstCard();
-    console.log(this.testTarget);
   }
 
   addToWishList(event) {
@@ -40,8 +39,7 @@ export default class extends Controller {
   }
 
   #displayNextCard(index) {
-
-    console.log();
+    console.log(this.petTargets.length);
     if(index !== undefined) {
       this.petTargets[index].classList.remove("d-block");
       this.petTargets[index].classList.add("d-none");
@@ -51,13 +49,8 @@ export default class extends Controller {
         this.petTargets[index + 1].classList.add("d-block");
 
       } else {
-        console.log(this.testTarget);
         this.testTarget.classList.remove("d-none");
       }
-    } else {
-
-      // this.noPetTarget.classList.remove("d-block");
-      // this.noPetTarget.classList.add("d-block");
     }
   }
 }

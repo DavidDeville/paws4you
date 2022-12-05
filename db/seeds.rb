@@ -171,6 +171,7 @@ puts "Users destroyed"
     puts "Creating list pets"
 
     ListPet.create!(pet_id: pet1.id, user_id: first_user.id, liked: true)
+    ListPet.create!(pet_id: pet2.id, user_id: first_user.id, liked: false)
     ListPet.create!(pet_id: pet2.id, user_id: second_user.id, liked: false)
     ListPet.create!(pet_id: pet3.id, user_id: third_user.id, liked: true)
     ListPet.create!(pet_id: pet4.id, user_id: fourth_user.id, liked: false)
