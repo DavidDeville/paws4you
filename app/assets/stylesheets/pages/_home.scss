@@ -1,8 +1,4 @@
 // Specific CSS for your home-page
-body{
-  background: linear-gradient(#DBD8AE, #EFEDCA);
-}
-
 #title h1{
   color: #51B68E;
   text-align: center;
@@ -11,7 +7,7 @@ body{
   font-size: 51px;
 }
 
-#container {
+#container-home {
   padding-top: 5vh;
   padding-bottom: 5vh;
   display: flex ;
@@ -19,6 +15,7 @@ body{
   align-items: center;
   height: 100vh;
   justify-content: space-evenly;
+  background: linear-gradient(#DBD8AE, #EFEDCA)
 }
 #text {
   color: #51B68E;
@@ -29,7 +26,7 @@ body{
 }
 
 
-img{
+#container-home img {
 width: 60vh;
 margin-right: 5vh;
 margin-bottom: 5vh;
