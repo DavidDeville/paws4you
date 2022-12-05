@@ -3,10 +3,14 @@
 <div id="container_map">
 <%#-----------------------Ajout de la carte------------------------------ %>
   <div class="map-view">
-    <img src="<%= image_path('mappy_paws.png') %>">
+    <div style="width: 352px; height: 350px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
     <div class="button-adresse text-center">
       <button type="button" class="my-2 btn button-home rounded">SPA Lille</button>
-      <button type="button" class="my-2 btn button-home rounded">150 Pl. de la Croix Rouge, 59200 Tourcoing</button>
+      <button type="buttons" class="my-2 btn button-home rounded">150 Pl. de la Croix Rouge, 59200 Tourcoing</button>
     </div>
   </div>
 </div>
