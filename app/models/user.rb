@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :list_pets
-  belongs_to :shelter
+  belongs_to :shelter, optional: true
 end
