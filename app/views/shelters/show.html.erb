@@ -9,8 +9,8 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
     <div class="button-adresse text-center">
-      <button type="button" class="my-2 btn button-home rounded">SPA Lille</button>
-      <button type="buttons" class="my-2 btn button-home rounded">150 Pl. de la Croix Rouge, 59200 Tourcoing</button>
+      <button type="button" class="my-2 btn button-home rounded"><%= @shelter.name %></button>
+      <button type="buttons" class="my-2 btn button-home rounded"><%= @shelter.address %></button>
     </div>
   </div>
 </div>
@@ -22,9 +22,9 @@
 <div class="container container-resize">
 
   <div class="infos">
-        <p class="infos-details"><i class="fa-regular fa-clock logo ms-4"></i> 9h à 19h</p>
-        <p class="infos-details"><i class="fa-solid fa-phone logo ms-4"></i> 03 20 25 54 55</p>
-        <p class="infos-details"><i class="fa-sharp fa-solid fa-envelope logo ms-4"></i> spa.lille@la-spa.fr</p>
+        <p class="infos-details"><i class="fa-regular fa-clock logo ms-4"></i> <%= @shelter.opening_hour%> à <%=@shelter.closing_hour %></p>
+        <p class="infos-details"><i class="fa-solid fa-phone logo ms-4"></i> <%= @shelter.phone_number %></p>
+        <p class="infos-details"><i class="fa-sharp fa-solid fa-envelope logo ms-4"></i><%= @shelter.email %></p>
         <p>Pour plus d’informations, contactez-nous</p>
   </div>
 
