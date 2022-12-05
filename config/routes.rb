@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :list_pets, only: ['index', 'create']
   end
   resources :shelters, only: ['show']
+  resources :dashboards, only: ['show']
 end
