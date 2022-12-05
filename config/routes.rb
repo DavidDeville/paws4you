@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :pets, only: ['index', 'show'] do
     resources :list_pets, only: ['create']
   end
+get '/conditions', to: 'pages#conditions'
 end
