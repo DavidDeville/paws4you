@@ -1,0 +1,88 @@
+.listpets-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-list-pets h2 {
+  margin: 16px 0px 20px 0px;
+}
+
+.shelter-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.shelter-cards-infos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shelter-cards-infos p {
+  background-color: #51B68E;
+  padding: 6px 8px;
+  color: white;
+  margin: 0px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.shelter-cards-infos h5 {
+  margin: 10px 0px;
+}
+
+.pets-li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+
+.pets-li li {
+  list-style: none;
+}
+
+.pets-cards-shelter {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  border-radius: 4px;
+  height: 80px;
+  width: 300px;
+  justify-content: space-between;
+  margin: 6px 0px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.pets-cards-shelter i {
+  margin-right: 10px;
+  margin-left: 16px;
+  }
+
+.pets-cards-shelter-infos {
+  margin-left: 12px;
+  margin-right: 30px;
+}
+
+.pets-cards-shelter-img {
+  width: 26%;
+  height: 100%;
+  background-color: red;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.pets-cards-shelter img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.pets-cards-shelter p {
+  margin: 0;
+  font-size: 12px;
+}
