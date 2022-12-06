@@ -1,0 +1,34 @@
+
+  <div class="container">
+
+    <div class="title-conditions">
+      <h1>Paws4You</h1>
+    </div>
+    <div class="image-chien">
+      <img src="<%= image_path('dog.png') %>">
+    </div>
+
+    <div data-controller="conditions">
+      <div class="condition" data-conditions-target="condition1">
+        <h2>Conditions d’adoptions</h2>
+        <p>Si vous décidez d’adopter, vous devez obligatoirement être <strong>majeur</strong> et vous inscrire dans une démarche d'adoption responsable.</p>
+      </div>
+
+      <div class="condition d-none" data-conditions-target="condition2">
+        <h2>Conditions d’adoptions 2</h2>
+        <p>Si vous décidez d’adopter, vous devez obligatoirement être <strong>majeur</strong> et vous inscrire dans une démarche d'adoption responsable.</p>
+      </div>
+
+      <div class ="condition d-none" data-conditions-target="condition3">
+        <h2>Conditions d’adoptions 3</h2>
+        <p>Si vous décidez d’adopter, vous devez obligatoirement être <strong>majeur</strong> et vous inscrire dans une démarche d'adoption responsable.</p>
+      </div>
+
+
+      <div class="btn">
+        <i data-action="click->conditions#first" data-conditions-target="btn1" class="fa-solid fa-paw paw-active"></i>
+        <i data-action="click->conditions#second" data-conditions-target="btn2" class="fa-solid fa-paw"></i>
+        <i data-action="click->conditions#third" data-conditions-target="btn3" class="fa-solid fa-paw"></i>
+      </div>
+    </div>
+  </div>
