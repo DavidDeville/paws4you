@@ -1,2 +1,21 @@
-<h1>Dashboards#show</h1>
-<p>Find me in app/views/dashboards/show.html.erb</p>
+<%= render "shared/navbar" %>
+<div class="container">
+  <div class="dashboard-titles">
+    <h2><%= @shelter.name %> : Tableau de bord</h2>
+    <div class="dashboard-infos">
+      <h5>Dans mon refuge</h5>
+      <%= link_to new_pet_path do %>
+        <p>Ajouter un animal</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="grid">
+    <% @pets.each do |pet| %>
+      <%= link_to edit_pet_path(pet) do %>
+        <div class="cards-dashboards" style="background-image: url(<%= cl_image_path pet.photo.key %>)">
+          <p><%= pet.name %> <i class="fa-solid fa-pen dashboard-pen"></i></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
