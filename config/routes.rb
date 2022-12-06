@@ -10,5 +10,11 @@ Rails.application.routes.draw do
     resources :list_pets, only: ['index', 'create']
   end
   resources :shelters, only: ['show']
+  get '/conditions', to: 'pages#conditions'
+  patch '/profiles', to: 'profiles#confirm'
   resources :dashboards, only: ['show']
+
+  resources :users do
+    resources :list_pets, only: ['index']
+  end
 end
