@@ -10,5 +10,9 @@ application.register("hello", HelloController)
 import ListController from "./list_controller"
 application.register("list", ListController)
 
+import SigninShelterController from "./signin_shelter_controller"
+application.register("signin-shelter", SigninShelterController)
+
 import MapController from "./map_controller"
 application.register("map", MapController)
+
