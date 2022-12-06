@@ -1,3 +1,42 @@
+
 .paw-active {
-  color: red;
+  color:#51B68E;
+  size: 50px;
+
+}
+
+.btn-paw {
+  display: flex;
+  justify-content: center;
+  size: 60px;
+}
+.paw{
+font-size:50px;
+padding: 10px;
+}
+
+.container h1{
+  color: #51B68E;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.image-chien img{
+  width: 100%;
+  padding: 30px;
+}
+.condition h2{
+  color:#272A4B;
+  text-align: center;
+  font-weight: Harmattan;
+  font-weight: bold;
+  padding: 5px;
+}
+.condition p{
+  color:#272A4B;
+  text-align: center;
+  font-weight: Harmattan;
+  padding: 30px;
 }
