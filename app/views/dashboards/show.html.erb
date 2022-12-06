@@ -1,11 +1,13 @@
 <%= render "shared/navbar" %>
 <div class="container">
   <div class="dashboard-titles">
-  <h2><%= @shelter.name %> : Tableau de bord</h2>
-  <div class="dashboard-infos">
-    <h5>Dans mon refuge</h5>
-
-  </div>
+    <h2><%= @shelter.name %> : Tableau de bord</h2>
+    <div class="dashboard-infos">
+      <h5>Dans mon refuge</h5>
+      <%= link_to pet_path do %>
+        <p>Ajouter un animal</p>
+      <% end %>
+    </div>
   </div>
   <div class="grid">
     <% @pets.each do |pet| %>
