@@ -1,19 +1,23 @@
-.content-shelter-show {
-  background: linear-gradient(white);
-}
-
 .map-view {
-  position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
 }
 
 .button-adresse {
-  position:absolute;
-  bottom: 20px;
+  z-index: 1;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
 .button-message {
   text-align: center;
+  display: flex;
+  justify-content: center
 }
 
 .container-infos {
@@ -34,8 +38,9 @@
 }
 
 .infos-details {
-  font-size: 18px;
-
+  font-size: 21px;
+  margin-bottom: 2rem;
+  font-family: 'Harmattan', cursive;
 }
 
 #logo{

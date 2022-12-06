@@ -1,5 +1,5 @@
 class ListPet < ApplicationRecord
-  belongs_to :pet, dependent: :destroy
+  belongs_to :pet
 
   belongs_to :user
 

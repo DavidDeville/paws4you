@@ -41,11 +41,11 @@ puts "Users destroyed"
 
     puts "Creating shelters"
 
-    first_shelter = Shelter.create!(name: "SPA", address: "2 avenue des saules, 59000 Lille", phone_number: "0730204569", email: "spa@gmail.com")
-    second_shelter = Shelter.create!(name: "LPA", address: "2 rue esquermoise, 59000 Lille", phone_number: "09070425639", email: "lpa@gmail.com")
-    third_shelter = Shelter.create!(name: "Action 4 Pets", address: "7 rue neuve, 59000 Lille", phone_number: "0715141697", email: "action4pet@gmail.com")
-    fourth_shelter = Shelter.create!(name: "Les patounes des îles", address: "181 rue du ballon, 59110 La Madeleine", phone_number: "0969857541", email: "lpdi@gmail.com")
-    fifth_shelter = Shelter.create!(name: "Aristocats", address: "5 pl de la République, 59000 Lille", phone_number: "0989974652", email: "aristocats@gmail.com")
+    first_shelter = Shelter.create!(name: "SPA", address: "2 avenue des saules, 59000 Lille", phone_number: "0730204569", email: "spa@gmail.com", opening_hour: "8h", closing_hour: "18h")
+    second_shelter = Shelter.create!(name: "LPA", address: "2 rue esquermoise, 59000 Lille", phone_number: "09070425639", email: "lpa@gmail.com", opening_hour: "8h", closing_hour: "18h")
+    third_shelter = Shelter.create!(name: "Action 4 Pets", address: "7 rue neuve, 59000 Lille", phone_number: "0715141697", email: "action4pet@gmail.com", opening_hour: "9h", closing_hour: "19h")
+    fourth_shelter = Shelter.create!(name: "Les patounes des îles", address: "181 rue du ballon, 59110 La Madeleine", phone_number: "0969857541", email: "lpdi@gmail.com", opening_hour: "9h", closing_hour: "19h")
+    fifth_shelter = Shelter.create!(name: "Aristocats", address: "5 pl de la République, 59000 Lille", phone_number: "0989974652", email: "aristocats@gmail.com", opening_hour: "8h", closing_hour: "18h")
 
     puts "Shelters created"
 
@@ -171,6 +171,7 @@ puts "Users destroyed"
     puts "Creating list pets"
 
     ListPet.create!(pet_id: pet1.id, user_id: first_user.id, liked: true)
+    ListPet.create!(pet_id: pet2.id, user_id: first_user.id, liked: false)
     ListPet.create!(pet_id: pet2.id, user_id: second_user.id, liked: false)
     ListPet.create!(pet_id: pet3.id, user_id: third_user.id, liked: true)
     ListPet.create!(pet_id: pet4.id, user_id: fourth_user.id, liked: false)
