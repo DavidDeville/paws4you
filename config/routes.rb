@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :shelters, only: ['show']
   get '/conditions', to: 'pages#conditions'
   patch '/profiles', to: 'profiles#confirm'
+  resources :dashboards, only: ['show']
 end

@@ -53,9 +53,9 @@ puts "Users destroyed"
 
     puts "Creating dogs"
 
-    pet1 = Pet.create!(name: "Cactus", age: "14/04/2022", race: "Bichon", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
-    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/62271/cactus-du-pays-du-bocage-62271-6388b4a637e23.jpg")
-    pet1.photo.attach(io: file, filename: "Cactus", content_type: "image/jpg")
+    pet1 = Pet.create!(name: "Jedi", age: "01/01/2020", race: "Rottweiler", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/38473/jedi-38473-636e2def576a9.jpg")
+    pet1.photo.attach(io: file, filename: "Jedi", content_type: "image/jpg")
     pet1.save
 
     pet2 = Pet.create!(name: "Yoshi", age: "10/11/2017", race: "Akita", gender: "mâle", shelter_id: first_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
@@ -95,14 +95,14 @@ puts "Users destroyed"
     pet8.save
 
 
-    pet9 = Pet.create!(name: "Tommy", age: "07/15/2019", race: "Bouvier Bernois", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
-    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/27747/darlene-27747-623b33ced4e63.jpg")
-    pet9.photo.attach(io: file, filename: "Tommy", content_type: "image/jpg")
+    pet9 = Pet.create!(name: "Sharko", age: "01/01/2016", race: "Labrador", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/23084/sharko-23084-61952e292dae4.jpg")
+    pet9.photo.attach(io: file, filename: "Sharko", content_type: "image/jpg")
     pet9.save
 
-    pet10 = Pet.create!(name: "Cookie", age: "13/05/2019", race: "Dalmatien", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
-    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/27747/darlene-27747-623b33ced4e63.jpg")
-    pet10.photo.attach(io: file, filename: "Cookie", content_type: "image/jpg")
+    pet10 = Pet.create!(name: "Fifty", age: "11/10/2012", race: "Berger allemand", gender: "mâle", shelter_id: third_shelter.id, category: "chien", family_friendly: true, is_adopted: false)
+    file = URI.open("https://www.la-spa.fr/app/assets-spa/uploads/animals/61598/fifty-61598-6389c56733375.jpg")
+    pet10.photo.attach(io: file, filename: "Fifty", content_type: "image/jpg")
     pet10.save
 
   puts "Dogs created"
