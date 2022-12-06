@@ -12,8 +12,10 @@
     </div>
     <div class="box">
       <div class="left-box">
-        <%= link_to user_list_pets_path(current_user), class: "navbar-brand" do %>
-          <i class="fa-solid fa-bookmark bookmark"></i>
+        <% if current_user %>
+          <%= link_to user_list_pets_path(current_user), class: "navbar-brand" do %>
+            <i class="fa-solid fa-bookmark bookmark"></i>
+          <% end %>
         <% end %>
       </div>
     </div>

@@ -96,9 +96,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_112950) do
     t.boolean "has_garden"
     t.boolean "dog_preferences"
     t.boolean "cat_preferences"
-    t.boolean "has_agreed", default: false
     t.boolean "employee", default: false
     t.bigint "shelter_id"
+    t.boolean "has_agreed", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["shelter_id"], name: "index_users_on_shelter_id"
