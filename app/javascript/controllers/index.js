@@ -7,15 +7,17 @@ import { application } from "./application"
 import ConditionsController from "./conditions_controller"
 application.register("conditions", ConditionsController)
 
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import ListController from "./list_controller"
 application.register("list", ListController)
 
-import SigninShelterController from "./signin_shelter_controller"
-application.register("signin-shelter", SigninShelterController)
-
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import SigninShelterController from "./signin_shelter_controller"
+application.register("signin-shelter", SigninShelterController)

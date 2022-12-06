@@ -67,10 +67,6 @@ export default class extends Controller {
       else if (this.step === 2){
         this.third(event)
       }
-
-
-
-
     }
 
 }
