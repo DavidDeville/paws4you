@@ -32,6 +32,8 @@
       </div>
 
         <div class="btn-continuer">
-          <input type="button" value="Continuer">
+          <input type="button" value="Continuer"data-conditions-target="buttonContinuer" data-action="click->conditions#nextstep">
+          <%= link_to "Confirmer", "", class: "d-none", data: {conditions_target: "buttonConfirmer"} %>
         </div>
+
   </div>
