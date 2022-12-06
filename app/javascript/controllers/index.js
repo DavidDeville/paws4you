@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import ConditionsController from "./conditions_controller"
+application.register("conditions", ConditionsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

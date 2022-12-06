@@ -5,16 +5,16 @@
     <%= f.error_notification %>
 
     <div class="form-inputs" id="register_form" data-controller ="signin-shelter">
-      <%= f.input :last_name,
-                  label: "Nom",
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "last_name" } %>
       <%= f.input :first_name,
                   label: "Prénom",
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "first_name" } %>
+      <%= f.input :last_name,
+                  label: "Nom",
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "last_name" } %>
       <%= f.input :email,
                   label: "Email",
                   required: true,
