@@ -1,0 +1,39 @@
+<%= render "shared/navbar" %>
+
+<h2>Modifier un animal</h2>
+
+<h5><%= @pet.name %></h5>
+
+<%= simple_form_for(resource, as: resource_name, url: pet_path(resource_name), data: { turbo: :false }) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs" id="register_form">
+    <%= f.input :name,
+                label: "Nom",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" } %>
+    <%= f.input :age,
+                label: "Age",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "age" } %>
+    <%= f.input :race,
+                label: "Race",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "race" } %>
+    <%= f.input :category,
+                label: "Espèce",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "category" } %>
+    <%= f.input :family_friendly,
+                label: "Est-il adapté aux enfants ?",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "family_friendly" } %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, "Enregistrer", :class => 'btn button-home w-100' %>
+  </div>
+<% end %>
