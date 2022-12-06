@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
   resources :shelters, only: ['show']
   get '/conditions', to: 'pages#conditions'
+  patch '/profiles', to: 'profiles#confirm'
 end

@@ -33,7 +33,7 @@
 
         <div class="btn-continuer">
           <input type="button" value="Continuer"data-conditions-target="buttonContinuer" data-action="click->conditions#nextstep">
-          <%= link_to "Confirmer", "", class: "d-none", data: {conditions_target: "buttonConfirmer"} %>
+          <%= link_to "Confirmer", profiles_path, class: "d-none", data: {conditions_target: "buttonConfirmer", turbo_method: :patch} %>
         </div>
 
   </div>
