@@ -1,0 +1,61 @@
+
+.paw-active {
+  color:#51B68E;
+  size: 50px;
+
+}
+
+.btn-paw {
+  display: flex;
+  justify-content: center;
+  size: 50px;
+}
+.paw{
+font-size:30px;
+padding: 15px;
+}
+.btn-continuer > input {
+  background-color: #51B68E;
+  color: white;
+  padding: 5px;
+  font-size:20 ;
+  display: flex;
+  justify-content: center;
+
+}
+
+.btn-continuer > a {
+  background-color: #51B68E;
+  color: white;
+  padding: 5px;
+  font-size:20 ;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+}
+.container h1{
+  color: #51B68E;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.image-chien img{
+  width: 100%;
+  padding: 30px;
+}
+.condition h2{
+  color:#272A4B;
+  text-align: center;
+  font-weight: Harmattan;
+  font-weight: bold;
+  padding: 5px;
+}
+.condition p{
+  color:#272A4B;
+  text-align: center;
+  font-weight: Harmattan;
+  padding: 30px;
+}
