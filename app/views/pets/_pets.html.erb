@@ -1,8 +1,19 @@
 <% index = 0 %>
-  <% pets.each do |pet| %>
+  <% @pets.each do |pet| %>
     <div class="card-size d-none" data-list-target="pet">
       <div class="card-trip mt-5">
-        <%= cl_image_tag pet.photo.key, class: "pet-image" %>
+
+
+
+
+
+
+      <% pet.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, class: "pet-image" %>
+      <% end %>
+
+
+
         <div class="container">
           <div class="box-main">
             <div class="list-pets-box"></div>
@@ -31,9 +42,7 @@
           </div>
           <div>
             <div class="pet-description">
-              <p><%= pet.name %> est un jeune chien sous la réserve au premier abord car il est très craintif, mais qui, une fois en confiance, se montre adorable et affectueux.
-              Il est très dynamique et aura besoin de se sentir à l'aise dans son nouvel environnement.
-              Raïko est un chien qui a beaucoup de force, il faudra donc lui apprendre avec une éducation douce à se tenir en laisse.</p>
+              <p><%= pet.description %></p>
             </div>
           </div>
           <div class="pet-liker">
