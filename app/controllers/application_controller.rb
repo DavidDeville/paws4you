@@ -13,3 +13,4 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(current_user)
     current_user.employee ? dashboard_path(current_user.shelter_id) : pets_path
   end
+end
