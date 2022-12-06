@@ -1,18 +1,16 @@
 <%= render "shared/navbar" %>
 <div class="container">
   <div class="dashboard-titles">
-  <h2>Panneau Utilisateur</h2>
+  <h2><%= @shelter.name %> : Tableau de bord</h2>
   <h5>Dans mon refuge</h5>
   </div>
   <div class="grid">
-    <div class="cards-dashboards">
-      <p>Doggo</p>
-    </div>
-    <div class="cards-dashboards">
-      <p>Doggo</p>
-    </div>
-    <div class="cards-dashboards">
-      <p>Doggo</p>
-    </div>
+    <% @pets.each do |pet| %>
+      <%= link_to pets_path(pets) do %>
+        <div class="cards-dashboards" style="background-image: url(<%= cl_image_path pet.photo.key %>)">
+          <p><%= pet.name %> <i class="fa-solid fa-pen dashboard-pen"></i></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
