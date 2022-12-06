@@ -19,6 +19,11 @@ class ListPetsController < ApplicationController
     @pets_in_shelters = current_user.pets_shelters
   end
 
+  def destroy
+
+    raise
+  end
+
   private
 
   def listpets_params

@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   resources :dashboards, only: ['show']
 
   resources :users do
-    resources :list_pets, only: ['index']
+    resources :list_pets, only: ['index', 'destroy']
   end
 end

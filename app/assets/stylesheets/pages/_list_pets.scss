@@ -16,8 +16,14 @@
 
 .shelter-cards-infos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-right: 22px;
+}
+
+.check-profile {
+  text-decoration: none;
+  color: black;
 }
 
 .shelter-cards-infos p {
@@ -85,4 +91,8 @@
 .pets-cards-shelter p {
   margin: 0;
   font-size: 12px;
+}
+
+.ul-reset {
+  padding: 0px;
 }

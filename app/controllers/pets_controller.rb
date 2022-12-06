@@ -13,6 +13,10 @@ class PetsController < ApplicationController
     end
   end
 
+  def show
+    @pet = Pet.find(params[:id])
+  end
+  
   def new
     @pet = Pet.new
   end
