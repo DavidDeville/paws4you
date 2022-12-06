@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   get '/conditions', to: 'pages#conditions'
   patch '/profiles', to: 'profiles#confirm'
   resources :dashboards, only: ['show']
+
+  resources :users do
+    resources :list_pets, only: ['index']
+  end
 end

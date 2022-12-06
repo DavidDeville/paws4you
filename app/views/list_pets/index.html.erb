@@ -2,92 +2,38 @@
 
 <div class="container listpets-container">
   <h2>Wishlist</h2>
-  <div class="shelter-cards">
-    <div class="shelter-cards-infos">
-      <h5>SPA Lille</h5>
-      <%= link_to "/shelters/1" do %>
-        <p>Contact refuge</p>
-      <% end %>
+  <% @pets_in_shelters.each do |shelters| %>
+
+    <div class="shelter-cards">
+
+
+      <div class="shelter-cards-infos">
+        <h5><%= shelters[0].name %></h5>
+        <%= link_to shelter_path(shelters[0].id) do %>
+          <p>Contact refuge</p>
+        <% end %>
+      </div>
+
+
+
+      <% shelters[1].each do |animal|  %>
+      <ul>
+        <div class="pets-li">
+          <li>
+            <div class= "pets-cards-shelter">
+              <div class= "pets-cards-shelter-img" style='background-image: url("<%= cl_image_path animal.photo.key %>")'>
+              </div>
+              <div class= "pets-cards-shelter-infos">
+                <p><%= animal.name %></p>
+                <p><%= animal.race %></p>
+              </div>
+              <p>Voir profil </p>
+              <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <ul>
-      <div class="pets-li">
-        <li>
-          <div class= "pets-cards-shelter">
-            <div class= "pets-cards-shelter-img" style='background-image: url("<%= image_path('socrate-img.jpg') %>")'>
-            </div>
-            <div class= "pets-cards-shelter-infos">
-              <p>Socrate</p>
-              <p>Européen</p>
-            </div>
-            <p>Voir profil </p>
-            <i class="fa-regular fa-circle-xmark"></i>
-          </div>
-        </li>
-      </div>
-      <div class="pets-li">
-        <li>
-          <div class= "pets-cards-shelter">
-            <div class= "pets-cards-shelter-img" style='background-image: url("<%= image_path('charlemagne-img.jpg') %>")'>
-            </div>
-            <div class= "pets-cards-shelter-infos">
-              <p>Charlemagne</p>
-              <p>Ratier</p>
-            </div>
-            <p>Voir profil </p>
-            <i class="fa-regular fa-circle-xmark"></i>
-          </div>
-        </li>
-      </div>
-      <div class="pets-li">
-        <li>
-          <div class= "pets-cards-shelter">
-            <div class= "pets-cards-shelter-img" style='background-image: url("<%= image_path('patoche-img.jpg') %>")'>
-            </div>
-            <div class= "pets-cards-shelter-infos">
-              <p>Patoche</p>
-              <p>Border Collie</p>
-            </div>
-            <p>Voir profil </p>
-            <i class="fa-regular fa-circle-xmark"></i>
-          </div>
-        </li>
-      </div>
-    </ul>
-  </div>
-  <div class="shelter-cards">
-    <div class="shelter-cards-infos">
-      <h5>LPA Lille</h5>
-      <p>Contact refuge</p>
-    </div>
-    <ul>
-      <div class="pets-li">
-        <li>
-          <div class= "pets-cards-shelter">
-            <div class= "pets-cards-shelter-img" style='background-image: url("<%= image_path('julio-img.jpg') %>")'>
-            </div>
-            <div class= "pets-cards-shelter-infos">
-              <p>Julio</p>
-              <p>Husky Sibérien</p>
-            </div>
-            <p>Voir profil </p>
-            <i class="fa-regular fa-circle-xmark"></i>
-          </div>
-        </li>
-      </div>
-      <div class="pets-li">
-        <li>
-          <div class= "pets-cards-shelter">
-            <div class= "pets-cards-shelter-img" style='background-image: url("<%= image_path('tina_img.jpg') %>")'>
-            </div>
-            <div class= "pets-cards-shelter-infos">
-              <p>Tina</p>
-              <p>Européen</p>
-            </div>
-            <p>Voir profil </p>
-            <i class="fa-regular fa-circle-xmark"></i>
-          </div>
-        </li>
-      </div>
-    </ul>
-  </div>
+    <% end %>
+  <% end %>
 </div>
