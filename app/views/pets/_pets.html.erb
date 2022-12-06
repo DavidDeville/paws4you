@@ -1,26 +1,3 @@
-<!--<% index = 0 %>
-  <% pets.each do |pet| %>
-    <div class="card-size d-none" data-list-target="pet">
-      <div class="card-trip mt-5">
-        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" %>
-        <div class="card-trip-infos">
-          <div>
-            <h1><%= pet.name %></h1>
-          </div>
-          <div>
-            <h2>Nom du chien : <%= pet.name %></h2>
-            <p>Âge : <%= pet.age %> ans</p>
-            <div class="mt-2">
-              <%= link_to "Like", pet_list_pets_path(pet), class: "btn btn-primary", data: { turbo_method: :post, action: "click->list#addToWishList", index: index, liked: true, pet_id: pet.id } %>
-              <%= link_to "Dislike", pet_list_pets_path(pet), class: "btn btn-danger", data: { turbo_method: :post, action: "click->list#addToWishList", index: index, liked: false, pet_id: pet.id } %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% index += 1 %>
-<% end %>-->
-
 <% index = 0 %>
   <% pets.each do |pet| %>
     <div class="card-size d-none" data-list-target="pet">
