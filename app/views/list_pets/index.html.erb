@@ -24,7 +24,7 @@
               <%= link_to pet_path(animal.id), class: "check-profile" do %>
                 <p>Voir profil</p>
               <% end %>
-              <%= link_to user_list_pet_path(id: ListPet.where(pet_id: animal.id)) do %>
+              <%= link_to user_list_pet_path(id: animal.id), data: {turbo_method: :delete } do %>
                 <i class="fa-regular fa-circle-xmark"></i>
               <% end %>
             </div>
