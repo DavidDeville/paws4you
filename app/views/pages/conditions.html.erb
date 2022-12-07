@@ -31,9 +31,9 @@
         <i data-action="click->conditions#third" data-conditions-target="btn3" class="fa-solid fa-paw paw"></i>
       </div>
 
-        <div class="btn-continuer">
-          <input type="button" value="Continuer"data-conditions-target="buttonContinuer" data-action="click->conditions#nextstep">
-          <%= link_to "Confirmer", profiles_path, class: "d-none", data: {conditions_target: "buttonConfirmer", turbo_method: :patch} %>
-        </div>
+      <div class="btn-continuer">
+        <input type="button" value="Continuer"data-conditions-target="buttonContinuer" data-action="click->conditions#nextstep">
+        <%= link_to "Confirmer", profiles_path, class: "d-none", data: {conditions_target: "buttonConfirmer", turbo_method: :patch} %>
+      </div>
 
   </div>
