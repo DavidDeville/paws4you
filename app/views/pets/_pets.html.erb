@@ -3,17 +3,34 @@
     <div class="card-size d-none" data-list-target="pet">
       <div class="card-trip mt-5">
 
+  <%#-----------------------------------Carousel------------------------------ %>
+    <div id="<%="carouselExampleIndicators#{pet.id}"%>" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="100000000000000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#<%="carouselExampleIndicators#{pet.id}"%>" data-bs-slide-to="0"  class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#<%="carouselExampleIndicators#{pet.id}"%>" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+      </div>
 
 
+        <div class="carousel-inner">
+          <% pet.photos.each do |photo| %>
+            <div class="carousel-item <%= "active" if photo == pet.photos.first%>   ">
+              <%= cl_image_tag photo.key, class: "pet-image d-block w-100" %>
+            </div>
+          <% end %>
+        </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#<%="carouselExampleIndicators#{pet.id}"%>" data-bs-slide="prev">
+        <%# <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span> %>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#<%="carouselExampleIndicators#{pet.id}"%>" data-bs-slide="next">
+        <%# <span class="carousel-control-next-icon" aria-hidden="true"></span> %>
+        <%# <span class="visually-hidden">Next</span> %>
+      </button>
+    </div>
 
 
-
-      <% pet.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, class: "pet-image" %>
-      <% end %>
-
-
-
+<%#---------------------------------------Carousel------------------------------ %>
         <div class="container">
           <div class="box-main">
             <div class="list-pets-box"></div>
