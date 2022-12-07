@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
   def index
-    @pets = Pet.all
+
+    @pets = Pet.where(is_adopted: false)
     @pets = @pets.all if current_user.dog_preferences == true && current_user.cat_preferences == true
     @pets = @pets.where("category ILIKE ?", "chien") if current_user.dog_preferences == true && current_user.cat_preferences == false
     @pets = @pets.where("category ILIKE ?", "chat") if current_user.cat_preferences == true && current_user.dog_preferences == false
