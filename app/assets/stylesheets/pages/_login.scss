@@ -17,3 +17,32 @@ justify-content: space-evenly;
 #register_form {
   margin-top: 8px
 }
+
+#back-to-login > span{
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 35px;
+
+}
+
+#all-login{
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+}
+
+#back-to-login{
+  flex:1;
+}
+
+#back-to-login2{
+  flex:1;
+}
+
+#back-to-login3{
+  flex:1;
+}
