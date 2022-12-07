@@ -84,15 +84,14 @@ puts "Users destroyed"
 
 
     pet5 = Pet.create!(name: "Oslo", age: "22/11/2019", race: "Husky", gender: "mâle", shelter_id: first_shelter.id, category: "chien", description: "Oslo est un jeune chien exceptionnellement intelligent mais qui par conséquent demandera énormément de stimulations
-      il a un très grand potentiel pour la recherche olfactive
-      il ne pourra pas partager son foyer avec un chat", main_quality:"Affectueux", family_friendly: true, is_adopted: false)
+      il a un très grand potentiel pour la recherche olfactive, il ne pourra pas partager son foyer avec un chat", main_quality:"Affectueux", family_friendly: true, is_adopted: false)
     file = URI.open("app/assets/images/Oslo1.jpg")
     pet5.photos.attach(io: file, filename: "Oslo1", content_type: "image/jpg")
     file = URI.open("app/assets/images/Oslo2.jpg")
     pet5.photos.attach(io: file, filename: "Oslo2", content_type: "image/jpg")
     pet5.save
 
-    pet6 = Pet.create!(name: "Shelby", age: "09/03/2014", race: "Cavalier King Charles", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", description: "Lorsque Django est dans son box, il peut se montrer méfiant envers certains inconnus se présentant devant lui. Nous éviterons de le placer avec de jeunes enfants afin qu'il se sente le plus serein possible dans son nouveau foyer. Il a beaucoup de mal avec ses congénères et les chats nous ne le placerons uniquement qu'en chien unique ! ", main_quality:"Sportif", family_friendly: true, is_adopted: false)
+    pet6 = Pet.create!(name: "Shelby", age: "09/03/2014", race: "Cavalier King Charles", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", description:"Shelby est une très gentille chien, câline et attachante, qui globalement s’entend plutôt bien avec ses congénères", main_quality:"Joueuse", family_friendly: true, is_adopted: false)
     file = URI.open("app/assets/images/Shelby1.jpg")
     pet6.photos.attach(io: file, filename: "Shelby1", content_type: "image/jpg")
     file = URI.open("app/assets/images/Shelby2.jpg")
