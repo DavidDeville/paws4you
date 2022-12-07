@@ -1,0 +1,5 @@
+meta_product_name: "PAWS4YOU"
+meta_title: "Paws4you - Ils n'attendent que vous"
+meta_description: "Paws4you est une application qui a pour objectif de faciliter l'adoption d'animaux (chiens ou chats)"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+twitter_account: "@paws4you"   # required for Twitter Cards

@@ -9,13 +9,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
   </style>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
 
-    <title>Paws4you - Ils n'attendent que vous !</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Paws4you - Ils n'attendent que vous !" />
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.paws4you.xyz" />
-    <meta property="og:image" content="https://wl-brightside.cf.tsp.li/resize/1200x630/jpg/ef9/0e6/66cab85ad5aedd602b737f7b96.jpg" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
