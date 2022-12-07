@@ -1,8 +1,9 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
-    @pets = @pets.where("category ILIKE ?", "chien") if current_user.dog_preferences == true
-    @pets = @pets.where("category ILIKE ?", "chat") if current_user.cat_preferences == true
+    @pets = @pets.all if current_user.dog_preferences == true && current_user.cat_preferences == true
+    @pets = @pets.where("category ILIKE ?", "chien") if current_user.dog_preferences == true && current_user.cat_preferences == false
+    @pets = @pets.where("category ILIKE ?", "chat") if current_user.cat_preferences == true && current_user.dog_preferences == false
 
     if params[:refresh]
       current_user.list_pets.where(liked: false).destroy_all
@@ -16,7 +17,7 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
   end
-  
+
   def new
     @pet = Pet.new
   end
