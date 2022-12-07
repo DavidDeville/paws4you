@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :list_pets
   has_many :pets, through: :list_pets
   belongs_to :shelter, optional: true
+  validates :phone_number, format: { with: /\A(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}\z/ }
+
 
   # Finds all pets liked by the user
   def liked_pets
