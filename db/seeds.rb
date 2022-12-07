@@ -23,7 +23,7 @@ puts "Destroying Users.."
 User.destroy_all
 puts "Users destroyed"
 
-lorem = "Sapristi de tabarnak de mautadit de bâtard de mosus de caltor de charogne de purée de cibouleau."
+
 
 # 1.times do
   #--------------------------------------------------Création des users--------------------------------------------------------------
@@ -63,7 +63,7 @@ lorem = "Sapristi de tabarnak de mautadit de bâtard de mosus de caltor de charo
     pet2 = Pet.create!(name: "Charlie", age: "17/07/2017", race: "Beagle", gender: "mâle", shelter_id: first_shelter.id, category: "chien", description: "Charlie est un jeune chien au profil énergique. De nature nerveuse, il aura besoin d'être accompagné en douceur et dans la bienveillance afin d'être rassuré notamment avec les inconnus qui ont tendance à lui faire peur. Une fois en confiance, Charlie est très affectueux. Il aime jouer et se faire papouiller. Il s'entend avec ses congénères mais on évitera les chats.", main_quality:"Fan de chaussette", family_friendly: true, is_adopted: false)
     file = URI.open("app/assets/images/Charlie1.jpg")
     pet2.photos.attach(io: file, filename: "Charlie1", content_type: "image/jpg")
-    file = URI.open("app/assets/images/Charlie2jpg")
+    file = URI.open("app/assets/images/Charlie2.jpg")
     pet2.photos.attach(io: file, filename: "Charlie2", content_type: "image/jpg")
     pet2.save
 
@@ -151,7 +151,7 @@ lorem = "Sapristi de tabarnak de mautadit de bâtard de mosus de caltor de charo
     pet2.photos.attach(io: file, filename: "Karma2", content_type: "image/jpg")
     pet2.save
 
-    pet3 = Pet.create!(name: "Titeuf", age: "01/01/2008", race: "Européen", gender: "mâle", shelter_id: fifth_shelter.id, category: "chat", description: "Titeuf est une magnifique minette un peu caractériel et indépendante. Elle aura besoin de temps pour faire confiance.", main_quality:"Espiègle", family_friendly: true, is_adopted: false)
+    pet3 = Pet.create!(name: "Titeuf", age: "01/01/2008", race: "Européen", gender: "mâle", shelter_id: fifth_shelter.id, category: "chat", description: "Titeuf est une magnifique minette indépendante. Elle aura besoin de temps pour faire confiance.", main_quality:"Espiègle", family_friendly: true, is_adopted: false)
     file = URI.open("app/assets/images/Titeuf1.jpg")
     pet3.photos.attach(io: file, filename: "Titeuf1", content_type: "image/jpg")
     file = URI.open("app/assets/images/Titeuf2.jpg")
