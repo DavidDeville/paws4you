@@ -92,11 +92,11 @@ puts "Users destroyed"
     pet5.photos.attach(io: file, filename: "Oslo2", content_type: "image/jpg")
     pet5.save
 
-    pet6 = Pet.create!(name: "Django", age: "09/03/2014", race: "Berger belge Malinois", gender: "mâle", shelter_id: fourth_shelter.id, category: "chien", description: "Lorsque Django est dans son box, il peut se montrer méfiant envers certains inconnus se présentant devant lui. Nous éviterons de le placer avec de jeunes enfants afin qu'il se sente le plus serein possible dans son nouveau foyer. Il a beaucoup de mal avec ses congénères et les chats nous ne le placerons uniquement qu'en chien unique ! ", main_quality:"Sportif", family_friendly: true, is_adopted: false)
-    file = URI.open("app/assets/images/Django1.jpg")
-    pet6.photos.attach(io: file, filename: "Django1", content_type: "image/jpg")
-    file = URI.open("app/assets/images/Django2.jpg")
-    pet6.photos.attach(io: file, filename: "Django2", content_type: "image/jpg")
+    pet6 = Pet.create!(name: "Shelby", age: "09/03/2014", race: "Cavalier King Charles", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", description: "Lorsque Django est dans son box, il peut se montrer méfiant envers certains inconnus se présentant devant lui. Nous éviterons de le placer avec de jeunes enfants afin qu'il se sente le plus serein possible dans son nouveau foyer. Il a beaucoup de mal avec ses congénères et les chats nous ne le placerons uniquement qu'en chien unique ! ", main_quality:"Sportif", family_friendly: true, is_adopted: false)
+    file = URI.open("app/assets/images/Shelby1.jpg")
+    pet6.photos.attach(io: file, filename: "Shelby1", content_type: "image/jpg")
+    file = URI.open("app/assets/images/Shelby2.jpg")
+    pet6.photos.attach(io: file, filename: "Shelby2", content_type: "image/jpg")
     pet6.save
 
     pet7 = Pet.create!(name: "Lola", age: "21/06/2018", race: "Bichon", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", description: "Lola est une chienne adorable, qui adore les câlins et les cours d'agility", main_quality:"Espiègle", family_friendly: true, is_adopted: false)
