@@ -20,8 +20,10 @@ class ListPetsController < ApplicationController
   end
 
   def destroy
+    @list_pet = ListPet.find_by_pet_id(params[:id])
+    @list_pet.destroy
 
-    raise
+    redirect_to user_list_pets_path(current_user)
   end
 
   private
