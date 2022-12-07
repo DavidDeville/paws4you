@@ -12,7 +12,7 @@
   <div class="grid">
     <% @pets.each do |pet| %>
       <%= link_to edit_pet_path(pet) do %>
-        <div class="cards-dashboards" style="background-image: url(<%= cl_image_path pet.photo.key %>)">
+        <div class="cards-dashboards" style="background-image: url(<%= cl_image_path pet.photos[0].key %>)">
           <p><%= pet.name %> <i class="fa-solid fa-pen dashboard-pen"></i></p>
         </div>
       <% end %>
