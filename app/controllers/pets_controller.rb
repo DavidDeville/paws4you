@@ -28,8 +28,9 @@ class PetsController < ApplicationController
 
   def update
     @pet = Pet.find(params[:id])
+    @shelter = @pet.shelter
     if @pet.update(pet_params)
-      redirect_to show_dashboard_path(@pet)
+      redirect_to dashboard_path(@shelter)
     else
       render :edit, status: :unprocessable_entity
     end
