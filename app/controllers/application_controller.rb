@@ -11,6 +11,14 @@ class ApplicationController < ActionController::Base
 
   # Redirect des users en fonction de #employee? après le formulaire d'inscription
   def after_sign_in_path_for(current_user)
-    current_user.employee ? dashboard_path(current_user.shelter_id) : pets_path
+    if current_user.has_agreed == false
+      conditions_path
+    else
+      current_user.employee ? dashboard_path(current_user.shelter_id) : pets_path
+    end
+  end
+
+  def after_sign_up_path_for(current_user)
+    conditions_path
   end
 end
