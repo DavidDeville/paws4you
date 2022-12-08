@@ -14,10 +14,10 @@
                   autofocus: true,
                   input_html: { autocomplete: "name" } %>
       <%= f.input :age,
-                  label: "Age",
+                  label: "Date de naissance",
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "age" } %>
+                  input_html: { autocomplete: "birthday" } %>
       <%= f.input :race,
                   label: "Race",
                   required: true,
@@ -33,6 +33,11 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "family_friendly" } %>
+                    <%= f.input :cat_friendly,
+                  label: "Est-il adapté aux chats ?",
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "cat_friendly" } %>
     </div>
     <div class="form-actions">
       <%= f.button :submit, "Enregistrer", :class => 'btn button-home w-100' %>
