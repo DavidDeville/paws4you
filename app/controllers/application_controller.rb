@@ -25,4 +25,9 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { host: ENV["DOMAIN"] || "localhost:3000" }
   end
+
+
+  def after_update_path_for(resource)
+    user_path(resource)
+  end
 end
