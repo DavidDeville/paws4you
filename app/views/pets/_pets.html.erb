@@ -42,7 +42,7 @@
               <% if !pet.family_friendly %>
                 <%= image_tag "https://www.la-spa.fr/static/media/nochildren.bb371c9d.svg", class: "nochildren-icon" %>
               <% end %>
-                <%= if !pet.cat_friendly %>
+                <% if !pet.cat_friendly %>
                   <%= image_tag "https://www.la-spa.fr/static/media/nocats.5f46b4e3.svg", class: "nocat-icon" %>
                 <% end %>
 

@@ -91,7 +91,7 @@ puts "Users destroyed"
     pet5.photos.attach(io: file, filename: "Oslo2", content_type: "image/jpg")
     pet5.save
 
-    pet6 = Pet.create!(name: "Shelby", birthday: "09-03-2014", race: "Cavalier King Charles", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", description:"Shelby est une très gentille chien, câline et attachante, qui globalement s’entend plutôt bien avec ses congénères", main_quality:"Joueuse", family_friendly: true, cat_friendly: true, is_adopted: false)
+    pet6 = Pet.create!(name: "Shelby", birthday: "09-03-2014", race: "Cavalier King Charles", gender: "femelle", shelter_id: fourth_shelter.id, category: "chien", description:"Shelby est une très gentille chienne, câline et attachante, qui globalement s’entend plutôt bien avec ses congénères", main_quality:"Joueuse", family_friendly: true, cat_friendly: true, is_adopted: false)
     file = URI.open("app/assets/images/Shelby1.jpg")
     pet6.photos.attach(io: file, filename: "Shelby1", content_type: "image/jpg")
     file = URI.open("app/assets/images/Shelby2.jpg")
@@ -113,7 +113,7 @@ puts "Users destroyed"
     pet8.save
 
 
-    pet9 = Pet.create!(name: "Pongo", birthday: "20-03-2018", race: "Golden Retriever", gender: "mâle", shelter_id: third_shelter.id, category: "chien", description: "Pongo est un chien doux au coeur tendre et fragile qui faudra chouchouter et prendre soins. Plusieurs rencontres seront nécessaires pour gagner sa confiance !", main_quality:"Espiègle", family_friendly: false, cat_friendly: false, is_adopted: false)
+    pet9 = Pet.create!(name: "Pongo", birthday: "20-03-2018", race: "Golden Retriever", gender: "mâle", shelter_id: third_shelter.id, category: "chien", description: "Pongo est un chien doux au coeur tendre et fragile qui faudra chouchouter et prendre soins. Plusieurs rencontres seront nécessaires pour gagner sa confiance !", main_quality:"Espiègle", family_friendly: false, cat_friendly: true, is_adopted: false)
     file = URI.open("app/assets/images/Pongo1.jpg")
     pet9.photos.attach(io: file, filename: "Pongo1", content_type: "image/jpg")
     file = URI.open("app/assets/images/Pongo2.jpg")
