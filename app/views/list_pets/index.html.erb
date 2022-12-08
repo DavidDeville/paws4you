@@ -15,23 +15,27 @@
         <div class="pets-li">
           <li>
             <div class= "pets-cards-shelter <%= 'adopted-pet' if animal.is_adopted %>">
-              <div class= "pets-cards-shelter-img" style='background-image: url("<%= cl_image_path animal.photos[0].key %>")'>
-              </div>
-              <% if !animal.is_adopted  %>
-                <div class= "pets-cards-shelter-infos">
-                  <p><%= animal.name %></p>
-                  <p><%= animal.race %></p>
+              <%= link_to pet_path(animal.id), class: "check-profile" do %>
+                <div class= "pets-cards-shelter-img" style='background-image: url("<%= cl_image_path animal.photos[0].key %>")'>
                 </div>
-                <%= link_to pet_path(animal.id), class: "check-profile" do %>
+                <% if !animal.is_adopted  %>
+                  <div class= "pets-cards-shelter-infos">
+                    <p><%= animal.name %></p>
+                    <p><%= animal.race %></p>
+                  </div>
                   <p>Voir profil</p>
-                <% end %>
-                <%= link_to user_list_pet_path(id: animal.id), data: {turbo_method: :delete } do %>
-                  <i class="fa-regular fa-circle-xmark"></i>
-                <% end %>
-              <% else %>
-                <p class="adopted">Déjà adopté</p>
-                <%= link_to user_list_pet_path(id: animal.id), data: {turbo_method: :delete } do %>
-                  <i class="fa-regular fa-circle-xmark"></i>
+                  <object>
+                    <%= link_to user_list_pet_path(id: animal.id), data: {turbo_method: :delete } do %>
+                      <i class="fa-regular fa-circle-xmark"></i>
+                    <% end %>
+                  </object>
+                <% else %>
+                  <p class="adopted">Déjà adopté</p>
+                  <object>
+                    <%= link_to user_list_pet_path(id: animal.id), data: {turbo_method: :delete } do %>
+                      <i class="fa-regular fa-circle-xmark"></i>
+                    <% end %>
+                  </object>
                 <% end %>
               <% end %>
             </div>

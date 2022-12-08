@@ -36,7 +36,7 @@ puts "Users destroyed"
     fourth_user = User.create!(first_name: "Bertrand", last_name: "La vigne", city: "Marseille", email: "bertrand@gmail.com", password: "123456", phone_number: "0808080808", situation: "seul", age: 22, has_garden: false, dog_preferences: true, cat_preferences: false)
     fifth_user = User.create!(first_name: "Julie", last_name: "Lejeune", city: "Roubaix", email: "julie@gmail.com", password: "123456", phone_number: "0808080808", age: 22, situation: "famille", has_garden: true, dog_preferences: false, cat_preferences: true)
 
-    puts "Users created"
+    puts "#{User.count} users created"
     #---------------------------------------------Création des shelters-------------------------------------------------------------------
 
     puts "Creating shelters"
@@ -47,7 +47,7 @@ puts "Users destroyed"
     fourth_shelter = Shelter.create!(name: "Les pattounes des îles", address: "224 Rue du Général Drouot, 59200 Tourcoing", phone_number: "0969857541", email: "lpdi@gmail.com", opening_hour: "9h", closing_hour: "19h")
     fifth_shelter = Shelter.create!(name: "Aristocats", address: "5 pl de la République, 59000 Lille", phone_number: "0989974652", email: "aristocats@gmail.com", opening_hour: "8h", closing_hour: "18h")
 
-    puts "Shelters created"
+    puts "#{Shelter.count} shelters created"
 
     #----------------------------------------Création des chiens------------------------------------------------------------------------
 
@@ -128,7 +128,9 @@ puts "Users destroyed"
     pet10.photos.attach(io: file, filename: "Rocky2", content_type: "image/jpg")
     pet10.save
 
-  puts "Dogs created"
+    dogs = Pet.count
+
+    puts "#{dogs} dogs created"
 
     #-------------------------------------Création des chats-------------------------------------------------------------------------
 
@@ -208,7 +210,8 @@ puts "Users destroyed"
     pet10.photos.attach(io: file, filename: "Rouka2", content_type: "image/jpg")
     pet10.save
 
-    puts "Cats created"
+    cats = Pet.count - dogs
+    puts "#{cats} cats created"
 
 
     #---------------------------------Création des list pets------------------------------------------------------------------------
@@ -222,4 +225,4 @@ puts "Users destroyed"
     ListPet.create!(pet_id: pet4.id, user_id: fourth_user.id, liked: false)
     ListPet.create!(pet_id: pet5.id, user_id: fifth_user.id, liked: true)
 
-    puts "Lists created"
+    puts "#{ListPet.count} lists created"
