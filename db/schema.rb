@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_07_114810) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_08_085849) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_114810) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.string "main_quality"
+    t.boolean "cat_friendly"
     t.index ["shelter_id"], name: "index_pets_on_shelter_id"
   end
 
@@ -99,8 +100,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_114810) do
     t.boolean "dog_preferences"
     t.boolean "cat_preferences"
     t.boolean "employee", default: false
-    t.bigint "shelter_id"
     t.boolean "has_agreed", default: false
+    t.bigint "shelter_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["shelter_id"], name: "index_users_on_shelter_id"
