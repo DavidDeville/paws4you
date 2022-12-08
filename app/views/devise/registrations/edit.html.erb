@@ -39,22 +39,14 @@
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :current_password,
                   label: "Ancien mot de passe",
-                  hint: "we need your current password to confirm your changes",
                   required: false,
                   input_html: { autocomplete: "current-password" } %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Update", class: "btn btn-primary" %>
+      <%= f.button :submit, "Mettre à jour", class: "btn btn-primary" %>
     </div>
   <% end %>
 
-  <h3>Cancel my account</h3>
-
-  <div class="d-flex align-items-center">
-    <div>Unhappy?</div>
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-link" %>
-  </div>
-
-  <%= link_to "Back", :back %>
+  <%= link_to "Retour", pets_path, class: "btn btn-success mt-3 back-btn" %>
 </div>
