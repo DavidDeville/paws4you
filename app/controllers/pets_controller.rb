@@ -14,7 +14,7 @@ class PetsController < ApplicationController
       @pets = @pets.where.not(id: list.pet_id)
     end
 
-    @pets = @pets.shuffle
+    # @pets = @pets.shuffle
   end
 
   def show
