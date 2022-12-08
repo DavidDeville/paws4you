@@ -19,6 +19,20 @@
   margin-bottom: 20px;
 }
 
+.swipe-right {
+  position: absolute;
+    transform: translate(800px, -20%);
+    z-index: 3;
+    transition: 1s
+}
+
+.swipe-left {
+  position: absolute;
+    transform: translate(-800px, 20%);
+    z-index: 3;
+    transition: 1s
+}
+
 .box-spa > i {
   color: #6CB491;
 }
