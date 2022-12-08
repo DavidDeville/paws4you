@@ -20,29 +20,34 @@ justify-content: space-evenly;
 
 #back-to-login > span{
 
-  background-color: #4CAF50;
-  color: white;
-  padding: 5px 15px;
+  color: #51B68E;
   text-align: center;
   font-size: 16px;
-  border-radius: 35px;
+  border-bottom: 0.8px solid;
+  opacity: 0.8;
 
 }
 
-#all-login{
+.button-back {
+  color: #51B68E !important;
+  text-decoration: none;
+}
+
+.all-login{
   display: flex;
-  width: 100%;
-  align-items: baseline;
+  width: 88%;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 #back-to-login{
   flex:1;
 }
 
-#back-to-login2{
+#back-to-login3{
   flex:1;
 }
 
-#back-to-login3{
-  flex:1;
+#back-to-login2 > h2{
+  margin: 0
 }
