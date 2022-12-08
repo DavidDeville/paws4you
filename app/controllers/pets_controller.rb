@@ -13,6 +13,8 @@ class PetsController < ApplicationController
     current_user.list_pets.each do | list |
       @pets = @pets.where.not(id: list.pet_id)
     end
+
+    @pets = @pets.shuffle
   end
 
   def show

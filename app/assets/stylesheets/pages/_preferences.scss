@@ -1,0 +1,56 @@
+.back-btn {
+  width: 82px;
+  color: white;
+}
+
+.dog {
+  font-size: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  width: 95px;
+}
+
+.dog-input {
+  position: absolute;
+  transform: scale(0);
+}
+
+.dog-input + label {
+  cursor: pointer;
+}
+
+.dog-input:checked + label {
+
+  .dog {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+  }
+}
+
+// Cat
+
+.cat {
+  font-size: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  width: 95px;
+}
+
+.cat-input {
+  position: absolute;
+  transform: scale(0);
+}
+
+.cat-input + label {
+  cursor: pointer;
+}
+
+.cat-input:checked + label {
+
+  .cat {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+  }
+}

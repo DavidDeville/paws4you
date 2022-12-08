@@ -1,0 +1,41 @@
+<div class="container mt-3" data-controller="profil">
+  <h2 class="text-center mt-2 mb-4">Éditer mes préférences</h2>
+  <%= simple_form_for(current_user, data: { turbo: false }, html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs mt-3">
+      <%= f.input :situation,
+                  label: "Situation",
+                  required: false %>
+      <%= f.input :has_garden,
+                  :label => "Je possède un jardin",
+                  required: false %>
+      <div class="d-flex justify-content-center">
+        <div>
+          <%= f.input :dog_preferences,
+                      :input_html => { :class => "dog-input", data: { action: "click->profil#handleCheck", profil_target: "dog" } },
+                      label: ('<img src="https://images.yappy.com/yappicon/jackrussellterrier/jackrussellterrier-01.png" class="dog">').html_safe,
+                      required: false %>
+          <div style="margin-left: 16px;">
+            <p class="with-dog text-center d-none" data-profil-target="chien"></p>
+          </div>
+        </div>
+        <div>
+          <%= f.input :cat_preferences,
+                      :input_html => { :class => "cat-input", data: { action: "click->profil#handleCheck", profil_target: "cat" } },
+                      label: ('<img src="https://fr.seaicons.com/wp-content/uploads/2015/10/Cat-icon.png" class="cat">').html_safe,
+                      required: false %>
+          <div style="margin-left: 16px;">
+            <p class="with-dog text-center d-none" data-profil-target="chat"></p>
+          </div>
+        </div>
+      </div>
+
+    <div class="form-actions text-center">
+      <%= f.button :submit, "Mettre à jour", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  <div class="text-center">
+    <%= link_to "Retour", :back, class: "btn btn-success mt-3 back-btn" %>
+  </div>
+</div>

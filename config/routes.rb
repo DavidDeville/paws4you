@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :list_pets, only: ['index', 'destroy']
   end
+
+  get '/users/preferences/edit', to: 'pages#preferences'
 end

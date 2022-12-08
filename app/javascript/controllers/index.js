@@ -19,5 +19,8 @@ application.register("list", ListController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import ProfilController from "./profil_controller"
+application.register("profil", ProfilController)
+
 import SigninShelterController from "./signin_shelter_controller"
 application.register("signin-shelter", SigninShelterController)
