@@ -17,6 +17,7 @@ export default class extends Controller {
 
 
   first(event) {
+    console.log("click first")
     this.condition1Target.classList.remove("d-none")
     this.condition2Target.classList.add("d-none")
     this.condition3Target.classList.add("d-none")
@@ -30,37 +31,44 @@ export default class extends Controller {
   }
 
   second(event) {
+  console.log("click second")
   this.condition1Target.classList.add("d-none")
   this.condition2Target.classList.remove("d-none")
   this.condition3Target.classList.add("d-none")
 
   this.btn1Target.classList.remove("paw-active")
+  this.btn1Target.classList.add("paw-read")
   this.btn2Target.classList.add("paw-active")
   this.btn3Target.classList.remove("paw-active")
   this.step = 2
   this.buttonContinuerTarget.classList.remove("d-none")
   this.buttonConfirmerTarget.classList.add("d-none")
-
   }
 
   third(event) {
+    console.log("click third")
     this.condition1Target.classList.add("d-none")
     this.condition2Target.classList.add("d-none")
     this.condition3Target.classList.remove("d-none")
 
+
+
     this.btn1Target.classList.remove("paw-active")
     this.btn2Target.classList.remove("paw-active")
     this.btn3Target.classList.add("paw-active")
+
+    this.btn1Target.classList.add("paw-read")
+    this.btn2Target.classList.add("paw-read")
+
+
     this.step = 3
     console.log(this.buttonContinuerTarget)
     this.buttonContinuerTarget.classList.add("d-none")
     this.buttonConfirmerTarget.classList.remove("d-none")
-
-
-
     }
 
     nextstep(event) {
+
       if (this.step === 1) {
         this.second(event)
       }

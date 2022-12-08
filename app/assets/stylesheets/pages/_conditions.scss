@@ -2,7 +2,13 @@
 .paw-active {
   color:#51B68E;
   size: 50px;
+  filter: grayscale(60%);
 
+}
+
+.paw-read {
+  color: #80808073;
+  size: 50px;
 }
 
 .btn-paw {
