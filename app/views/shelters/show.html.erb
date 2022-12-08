@@ -11,14 +11,15 @@
   </div>
 </div>
 
-<div class="container container-resize">
-  <div class="infos">
+<div class="container container-resize" data-controller="fireworks">
+  <div class="infos"
     <p class="infos-details mt-3"><i class="fa-regular fa-clock logo"></i> <%= @shelter.opening_hour%> à <%=@shelter.closing_hour %></p>
     <p class="infos-details"><i class="fa-solid fa-phone logo me-1"></i> <%= @shelter.phone_number %></p>
     <p class="infos-details"><i class="fa-sharp fa-solid fa-envelope logo me-2"></i><%= @shelter.email %></p>
     <p class="infos-details"><i class="fa-solid fa-circle-info logo me-2"></i>Pour plus d’informations, contactez-nous</p>
   </div>
+  <div class="fire"></div>
   <div class="button-message">
-    <button type="button" class="btn button-home rounded">Message</button>
+    <button type="button" class="my-2 btn button-home rounded shelter-contact-btn"  data-fireworks-target="firebtn" data-action="click->fireworks#test">Prendre rendez-vous</button>
   </div>
 </div>
