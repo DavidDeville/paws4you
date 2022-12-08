@@ -21,16 +21,16 @@
 
 .swipe-right {
   position: absolute;
-    transform: translate(800px, -20%);
+    transform: translate(800px, -80%);
     z-index: 3;
-    transition: 1s
+    transition: 1.5s
 }
 
 .swipe-left {
   position: absolute;
-    transform: translate(-800px, 20%);
+    transform: translate(-800px, -80%);
     z-index: 3;
-    transition: 1s
+    transition: 1.5s
 }
 
 .box-spa > i {
@@ -103,7 +103,7 @@
 .pet-image {
   height: 56vh !important;
   width: 100%;
-  object-fit: fill !important;
+  object-fit: cover;
   border-radius: 0px 0px 25px 25px;
 }
 

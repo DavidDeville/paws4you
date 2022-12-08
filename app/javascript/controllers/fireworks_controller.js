@@ -3,7 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 // import { Fireworks } from 'fireworks-js'
 import swal from 'sweetalert';
 
-
 // Connects to data-controller="fireworks"
 export default class extends Controller {
 

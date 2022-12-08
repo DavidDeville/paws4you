@@ -39,8 +39,13 @@
             </div>
             <div class="list-pets-box">
               <div class="list-pets-left-box">
+              <% if !pet.family_friendly %>
                 <%= image_tag "https://www.la-spa.fr/static/media/nochildren.bb371c9d.svg", class: "nochildren-icon" %>
-                <%= image_tag "https://www.la-spa.fr/static/media/nocats.5f46b4e3.svg", class: "nocat-icon" %>
+              <% end %>
+                <% if !pet.cat_friendly %>
+                  <%= image_tag "https://www.la-spa.fr/static/media/nocats.5f46b4e3.svg", class: "nocat-icon" %>
+                <% end %>
+
               </div>
             </div>
           </div>

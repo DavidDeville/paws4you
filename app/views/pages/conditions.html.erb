@@ -21,10 +21,10 @@
 
       <div class ="condition d-none" data-conditions-target="condition3">
         <h2>Validation du refuge</h2>
-        <p>Paws4You vous permet de rencontrer vos animaux préférés au sein de leurs refuges. Une procédure d’adoption </p>
+        <p>Paws4You vous permet de prendre contact directement avec les refuges pour convenir d'un rendez vous et rencontrer vos animaux préférés.</p>
       </div>
 
-
+    <div class="paws_conditions">
       <div class="btn-paw">
         <i data-action="click->conditions#first" data-conditions-target="btn1" class="fa-solid fa-paw paw paw-active"></i>
         <i data-action="click->conditions#second" data-conditions-target="btn2" class="fa-solid fa-paw paw"></i>
@@ -35,5 +35,5 @@
         <input type="button" value="Continuer"data-conditions-target="buttonContinuer" data-action="click->conditions#nextstep">
         <%= link_to "Confirmer", profiles_path, class: "d-none", data: {conditions_target: "buttonConfirmer", turbo_method: :patch} %>
       </div>
-
+    </div>
   </div>

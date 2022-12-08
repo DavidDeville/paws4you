@@ -1,9 +1,9 @@
 <%= render "/shared/navbar" %>
 
 <div class="background-login">
-  <div id="all-login">
+  <div class="all-login">
     <div id="back-to-login">
-    <span> < </span>
+    <span><%= link_to "Retour", new_user_session_path, class: "button-back" %> </span>
   </div>
   <div id="back-to-login2">
     <h2>Inscription</h2>

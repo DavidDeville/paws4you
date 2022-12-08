@@ -5,7 +5,7 @@ class Pet < ApplicationRecord
   belongs_to :shelter
   has_many :list_pets, dependent: :destroy
   validates :name, length: { minimum: 3 }, presence: true
-  validates :age, presence: true
+  validates :birthday, presence: true
   validates :race, presence: true
   #--------------------validation ou valeur par default?--------------
   validates :gender, presence: true, inclusion: GENDERS
