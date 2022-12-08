@@ -21,16 +21,16 @@
 
 .swipe-right {
   position: absolute;
-    transform: translate(800px, -20%);
+    transform: translate(800px, -80%);
     z-index: 3;
-    transition: 1s
+    transition: 1.5s
 }
 
 .swipe-left {
   position: absolute;
-    transform: translate(-800px, 20%);
+    transform: translate(-800px, -80%);
     z-index: 3;
-    transition: 1s
+    transition: 1.5s
 }
 
 .box-spa > i {

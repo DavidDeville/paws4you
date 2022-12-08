@@ -43,14 +43,20 @@ export default class extends Controller {
     if(index !== undefined) {
       if (liked) {
         this.petTargets[index].classList.remove("d-block");
-        this.petTargets[index].classList.add("swipe-right");
+        window.scroll(0,0,'smooth')
+        setTimeout(() => {
+          this.petTargets[index].classList.add("swipe-right");
+        }, "200")
         setTimeout(() => {
           this.petTargets[index].classList.add("d-none");
         }, "1000")
       }
       else {
         this.petTargets[index].classList.remove("d-block");
-        this.petTargets[index].classList.add("swipe-left");
+        window.scroll(0,0,'smooth')
+        setTimeout(() => {
+          this.petTargets[index].classList.add("swipe-left");
+        }, "200")
         setTimeout(() => {
           this.petTargets[index].classList.add("d-none");
         }, "1000")
