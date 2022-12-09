@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <div class="container mt-3">
   <h2 class="text-center">Éditer mon profil</h2>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { method: :put }) do |f| %>
