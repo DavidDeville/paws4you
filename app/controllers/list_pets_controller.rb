@@ -16,7 +16,7 @@ class ListPetsController < ApplicationController
   end
 
   def index
-    @pets_in_shelters = current_user.pets_shelters
+    @pets_in_shelters = current_user.pets_shelters.sort
   end
 
   def destroy
