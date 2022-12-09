@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div class="container container-resize" data-controller="fireworks">
+<div class="container container-resize" data-controller="fireworks" data-fireworks-shelter-value="<%= @shelter.name %>">
   <div class="infos">
     <p class="infos-details mt-3"><i class="fa-regular fa-clock logo"></i> <%= @shelter.opening_hour%> à <%=@shelter.closing_hour %></p>
     <p class="infos-details"><i class="fa-solid fa-phone logo me-1"></i> <%= @shelter.phone_number %></p>
@@ -20,6 +20,6 @@
   </div>
   <div class="fire"></div>
   <div class="button-message">
-    <button type="button"   class="my-2 btn button-home rounded shelter-contact-btn"  data-fireworks-target="firebtn" data-action="click->fireworks#alert">Prendre rendez-vous</button>
+    <button type="button"   class="btn button-home rounded shelter-contact-btn"  data-fireworks-target="firebtn" data-action="click->fireworks#alert">Prendre rendez-vous</button>
   </div>
 </div>

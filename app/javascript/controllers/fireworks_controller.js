@@ -8,14 +8,17 @@ export default class extends Controller {
 
   static targets = ['firebtn']
 
-  connect() {
+  static values = {
+    shelter: String
+  }
 
-   console.log(this.firebtnTarget)
-    // console.log("fireworks!")
+  connect() {
   }
 
   alert(){
-    swal("Demande envoyée", "Le refuge a bien reçu votre demande et vous répondra au plus vite!", "success");
+    setTimeout(() => {
+      swal("Demande envoyée", `${this.shelterValue} a bien reçu votre demande et vous répondra au plus vite !`, "success");
+    }, 800);
 
 
   }
