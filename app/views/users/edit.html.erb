@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <div class="container mt-3" data-controller="profil">
   <h2 class="text-center mt-2 mb-4">Éditer mes préférences</h2>
   <%= simple_form_for(current_user, data: { turbo: false }, html: { method: :put }) do |f| %>
